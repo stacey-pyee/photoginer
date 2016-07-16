@@ -9,10 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    var photographer: [String] = []
+    @IBOutlet weak var photographerTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.photographer = ["Adam","Bob","Catherine"]
+        self.photographerTableView.dataSource = self
+        self.photographerTableView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,4 +27,26 @@ class ViewController: UIViewController {
 
 
 }
+
+extension ViewController: UITableViewDataSource{
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.photographer.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = UITableViewCell()
+        let photographerName: String = self.photographer[indexPath.row]
+        cell.textLabel?.text = photographerName
+        return cell
+    }
+}
+
+extension ViewController: UITableViewDelegate{
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("User tapped on \((indexPath.row))")
+    }
+}
+
+
+
 
