@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.photographer = ["Adam","Bob","Catherine"]
+        self.photographer = ["Adam","Bob","Catherine","Jane"]
         self.photographerTableView.dataSource = self
         self.photographerTableView.delegate = self
     }
