@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E61A4951D3A399700253293 /* PhotographerProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E61A4941D3A399700253293 /* PhotographerProfileVC.swift */; };
 		4095A8EB1D3A1C04008F10A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4095A8EA1D3A1C04008F10A6 /* AppDelegate.swift */; };
 		4095A8ED1D3A1C04008F10A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4095A8EC1D3A1C04008F10A6 /* ViewController.swift */; };
 		4095A8F01D3A1C04008F10A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4095A8EE1D3A1C04008F10A6 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E61A4941D3A399700253293 /* PhotographerProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotographerProfileVC.swift; sourceTree = "<group>"; };
 		4095A8E71D3A1C04008F10A6 /* Photograph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photograph.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4095A8EA1D3A1C04008F10A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4095A8EC1D3A1C04008F10A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				4095A8F11D3A1C04008F10A6 /* Assets.xcassets */,
 				4095A8F31D3A1C04008F10A6 /* LaunchScreen.storyboard */,
 				4095A8F61D3A1C04008F10A6 /* Info.plist */,
+				1E61A4941D3A399700253293 /* PhotographerProfileVC.swift */,
 			);
 			path = Photograph;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			files = (
 				4095A8ED1D3A1C04008F10A6 /* ViewController.swift in Sources */,
 				4095A8EB1D3A1C04008F10A6 /* AppDelegate.swift in Sources */,
+				1E61A4951D3A399700253293 /* PhotographerProfileVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +488,7 @@
 				4095A9111D3A1C05008F10A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4095A9121D3A1C05008F10A6 /* Build configuration list for PBXNativeTarget "PhotographTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +497,7 @@
 				4095A9141D3A1C05008F10A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4095A9151D3A1C05008F10A6 /* Build configuration list for PBXNativeTarget "PhotographUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +506,7 @@
 				4095A9171D3A1C05008F10A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
