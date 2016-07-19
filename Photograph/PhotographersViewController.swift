@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PhotographersViewController: UIViewController {
     
     var photographer: [String] = []
     @IBOutlet weak var photographerTableView: UITableView!
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController: UITableViewDataSource{
+extension PhotographersViewController: UITableViewDataSource{
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.photographer.count
     }
@@ -41,11 +41,11 @@ extension ViewController: UITableViewDataSource{
     }
 }
 
-extension ViewController: UITableViewDelegate{
+extension PhotographersViewController: UITableViewDelegate{
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("User tapped on \((indexPath.row))")
         
-        let photographerProfileVC: PhotographerProfileVC = self.storyboard?.instantiateViewControllerWithIdentifier("PhotographerProfileVC") as! PhotographerProfileVC
+        let photographerProfileVC: PhotographerProfileViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PhotographerProfileViewController") as! PhotographerProfileViewController
         self.navigationController?.pushViewController(photographerProfileVC, animated: true)
     }
 }

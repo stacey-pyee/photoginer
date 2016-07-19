@@ -120,8 +120,8 @@ SWIFT_CLASS("_TtC10Photograph11AppDelegate")
 @class NSBundle;
 @class NSCoder;
 
-SWIFT_CLASS("_TtC10Photograph21PhotographerProfileVC")
-@interface PhotographerProfileVC : UIViewController
+SWIFT_CLASS("_TtC10Photograph33PhotographerProfileViewController")
+@interface PhotographerProfileViewController : UIViewController
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified photographerImageView;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified nameLabel;
 @property (nonatomic, weak) IBOutlet UICollectionViewCell * _Null_unspecified artworkCollectionView;
@@ -133,8 +133,8 @@ SWIFT_CLASS("_TtC10Photograph21PhotographerProfileVC")
 @end
 
 
-SWIFT_CLASS("_TtC10Photograph14ViewController")
-@interface ViewController : UIViewController
+SWIFT_CLASS("_TtC10Photograph27PhotographersViewController")
+@interface PhotographersViewController : UIViewController
 @property (nonatomic, copy) NSArray<NSString *> * _Nonnull photographer;
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified photographerTableView;
 - (void)viewDidLoad;
@@ -145,13 +145,13 @@ SWIFT_CLASS("_TtC10Photograph14ViewController")
 
 @class NSIndexPath;
 
-@interface ViewController (SWIFT_EXTENSION(Photograph)) <UITableViewDelegate, UIScrollViewDelegate>
+@interface PhotographersViewController (SWIFT_EXTENSION(Photograph)) <UITableViewDelegate, UIScrollViewDelegate>
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 @end
 
 @class UITableViewCell;
 
-@interface ViewController (SWIFT_EXTENSION(Photograph)) <UITableViewDataSource>
+@interface PhotographersViewController (SWIFT_EXTENSION(Photograph)) <UITableViewDataSource>
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 @end
