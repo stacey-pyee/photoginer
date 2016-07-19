@@ -44,6 +44,9 @@ extension ViewController: UITableViewDataSource{
 extension ViewController: UITableViewDelegate{
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("User tapped on \((indexPath.row))")
+        
+        let photographerProfileVC: PhotographerProfileVC = self.storyboard?.instantiateViewControllerWithIdentifier("PhotographerProfileVC") as! PhotographerProfileVC
+        self.navigationController?.pushViewController(photographerProfileVC, animated: true)
     }
 }
 

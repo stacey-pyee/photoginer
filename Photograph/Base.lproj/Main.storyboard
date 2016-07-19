@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cZg-Mh-3nj">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -31,6 +31,7 @@
                             <constraint firstAttribute="trailing" secondItem="rrc-1f-yfL" secondAttribute="trailing" id="lq0-n6-ymt"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="nlp-Wc-Eoa"/>
                     <connections>
                         <outlet property="photographerTableView" destination="rrc-1f-yfL" id="3nD-FM-4WG"/>
                     </connections>
@@ -39,10 +40,26 @@
             </objects>
             <point key="canvasLocation" x="245" y="305"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ztf-AK-NI5">
+            <objects>
+                <navigationController id="cZg-Mh-3nj" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kRq-Jp-2Lg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="LTJ-qe-Fct"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZA8-mF-4oM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-440" y="979"/>
+        </scene>
         <!--Photographer ProfileVC-->
         <scene sceneID="7JC-1r-n5X">
             <objects>
-                <viewController id="qrb-AK-sji" customClass="PhotographerProfileVC" customModule="Photograph" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PhotographerProfileVC" id="qrb-AK-sji" customClass="PhotographerProfileVC" customModule="Photograph" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Dtw-Ab-0MA"/>
                         <viewControllerLayoutGuide type="bottom" id="DJp-QH-c9r"/>
@@ -83,17 +100,7 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ghz-Vb-NZB">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="w33-IW-32f">
                                 <rect key="frame" x="0.0" y="397" width="600" height="203"/>
@@ -136,7 +143,6 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="artworkCollectionView" destination="ghz-Vb-NZB" id="le8-iK-b7S"/>
                         <outlet property="commentsTableView" destination="w33-IW-32f" id="jW9-uo-zRb"/>
                         <outlet property="nameLabel" destination="zlC-z0-sy3" id="kiE-qj-5vz"/>
                         <outlet property="photographerImageView" destination="JCv-aa-BZa" id="J0u-z7-nHr"/>
@@ -144,7 +150,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mpH-Ik-y14" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="922" y="1024"/>
+            <point key="canvasLocation" x="966" y="312"/>
         </scene>
     </scenes>
 </document>
