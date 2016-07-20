@@ -1,0 +1,210 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "PhotographerProfileViewController"
+provides-nominal:
+- "C10Photograph33PhotographerProfileViewController"
+provides-member:
+- ["C10Photograph33PhotographerProfileViewController", ""]
+provides-dynamic-lookup:
+- "commentsTableView"
+- "artworkCollectionView"
+- "viewDidLoad"
+- "photographerImageView"
+- "didReceiveMemoryWarning"
+- "nameLabel"
+depends-top-level:
+- "PhotographerProfileViewController"
+- "UITableView"
+- "UIViewController"
+- "UIImageView"
+- "UILabel"
+- "UICollectionViewCell"
+depends-member:
+- ["Ps9AnyObject", "artworkCollectionView"]
+- ["Ps9AnyObject", "commentsTableView"]
+- ["Ps9AnyObject", "didReceiveMemoryWarning"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "nameLabel"]
+- ["Ps9AnyObject", "photographerImageView"]
+- ["Ps9AnyObject", "viewDidLoad"]
+- ["Ps9AnyObject", ""]
+- ["Ps11CVarArgType", "artworkCollectionView"]
+- ["Ps11CVarArgType", "commentsTableView"]
+- ["Ps11CVarArgType", "didReceiveMemoryWarning"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "nameLabel"]
+- ["Ps11CVarArgType", "photographerImageView"]
+- ["Ps11CVarArgType", "viewDidLoad"]
+- ["Ps11CVarArgType", ""]
+- ["Ps28CustomDebugStringConvertible", "artworkCollectionView"]
+- ["Ps28CustomDebugStringConvertible", "commentsTableView"]
+- ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "nameLabel"]
+- ["Ps28CustomDebugStringConvertible", "photographerImageView"]
+- ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- ["Ps23CustomStringConvertible", "artworkCollectionView"]
+- ["Ps23CustomStringConvertible", "commentsTableView"]
+- ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "nameLabel"]
+- ["Ps23CustomStringConvertible", "photographerImageView"]
+- ["Ps23CustomStringConvertible", "viewDidLoad"]
+- ["Ps23CustomStringConvertible", ""]
+- ["Ps9Equatable", "artworkCollectionView"]
+- ["Ps9Equatable", "commentsTableView"]
+- ["Ps9Equatable", "didReceiveMemoryWarning"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "nameLabel"]
+- ["Ps9Equatable", "photographerImageView"]
+- ["Ps9Equatable", "viewDidLoad"]
+- ["Ps9Equatable", ""]
+- ["Ps8Hashable", "artworkCollectionView"]
+- ["Ps8Hashable", "commentsTableView"]
+- ["Ps8Hashable", "didReceiveMemoryWarning"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "nameLabel"]
+- ["Ps8Hashable", "photographerImageView"]
+- ["Ps8Hashable", "viewDidLoad"]
+- ["Ps8Hashable", ""]
+- ["PSo8NSCoding", "artworkCollectionView"]
+- ["PSo8NSCoding", "commentsTableView"]
+- ["PSo8NSCoding", "didReceiveMemoryWarning"]
+- ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "nameLabel"]
+- ["PSo8NSCoding", "photographerImageView"]
+- ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", ""]
+- ["PSo26NSExtensionRequestHandling", "artworkCollectionView"]
+- ["PSo26NSExtensionRequestHandling", "commentsTableView"]
+- ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
+- ["PSo26NSExtensionRequestHandling", "init"]
+- ["PSo26NSExtensionRequestHandling", "nameLabel"]
+- ["PSo26NSExtensionRequestHandling", "photographerImageView"]
+- ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- ["CSo8NSObject", "UICollectionViewCell"]
+- ["CSo8NSObject", "UIImageView"]
+- ["CSo8NSObject", "UILabel"]
+- ["CSo8NSObject", "UITableView"]
+- ["CSo8NSObject", "artworkCollectionView"]
+- ["CSo8NSObject", "commentsTableView"]
+- ["CSo8NSObject", "didReceiveMemoryWarning"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "nameLabel"]
+- ["CSo8NSObject", "photographerImageView"]
+- ["CSo8NSObject", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", "artworkCollectionView"]
+- ["PSo16NSObjectProtocol", "commentsTableView"]
+- ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "nameLabel"]
+- ["PSo16NSObjectProtocol", "photographerImageView"]
+- ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", ""]
+- ["C10Photograph33PhotographerProfileViewController", "UICollectionViewCell"]
+- ["C10Photograph33PhotographerProfileViewController", "UIImageView"]
+- ["C10Photograph33PhotographerProfileViewController", "UILabel"]
+- ["C10Photograph33PhotographerProfileViewController", "UITableView"]
+- ["C10Photograph33PhotographerProfileViewController", "artworkCollectionView"]
+- ["C10Photograph33PhotographerProfileViewController", "commentsTableView"]
+- ["C10Photograph33PhotographerProfileViewController", "deinit"]
+- ["C10Photograph33PhotographerProfileViewController", "didReceiveMemoryWarning"]
+- ["C10Photograph33PhotographerProfileViewController", "init"]
+- ["C10Photograph33PhotographerProfileViewController", "nameLabel"]
+- ["C10Photograph33PhotographerProfileViewController", "photographerImageView"]
+- ["C10Photograph33PhotographerProfileViewController", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", "artworkCollectionView"]
+- ["PSo21UIAppearanceContainer", "commentsTableView"]
+- ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
+- ["PSo21UIAppearanceContainer", "init"]
+- ["PSo21UIAppearanceContainer", "nameLabel"]
+- ["PSo21UIAppearanceContainer", "photographerImageView"]
+- ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", ""]
+- ["PSo18UIContentContainer", "artworkCollectionView"]
+- ["PSo18UIContentContainer", "commentsTableView"]
+- ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
+- ["PSo18UIContentContainer", "init"]
+- ["PSo18UIContentContainer", "nameLabel"]
+- ["PSo18UIContentContainer", "photographerImageView"]
+- ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", ""]
+- ["PSo18UIFocusEnvironment", "artworkCollectionView"]
+- ["PSo18UIFocusEnvironment", "commentsTableView"]
+- ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
+- ["PSo18UIFocusEnvironment", "init"]
+- ["PSo18UIFocusEnvironment", "nameLabel"]
+- ["PSo18UIFocusEnvironment", "photographerImageView"]
+- ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", ""]
+- ["CSo11UIResponder", "UICollectionViewCell"]
+- ["CSo11UIResponder", "UIImageView"]
+- ["CSo11UIResponder", "UILabel"]
+- ["CSo11UIResponder", "UITableView"]
+- ["CSo11UIResponder", "artworkCollectionView"]
+- ["CSo11UIResponder", "commentsTableView"]
+- ["CSo11UIResponder", "didReceiveMemoryWarning"]
+- ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "nameLabel"]
+- ["CSo11UIResponder", "photographerImageView"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- ["PSo16UIStateRestoring", "artworkCollectionView"]
+- ["PSo16UIStateRestoring", "commentsTableView"]
+- ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
+- ["PSo16UIStateRestoring", "init"]
+- ["PSo16UIStateRestoring", "nameLabel"]
+- ["PSo16UIStateRestoring", "photographerImageView"]
+- ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", ""]
+- ["PSo18UITraitEnvironment", "artworkCollectionView"]
+- ["PSo18UITraitEnvironment", "commentsTableView"]
+- ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
+- ["PSo18UITraitEnvironment", "init"]
+- ["PSo18UITraitEnvironment", "nameLabel"]
+- ["PSo18UITraitEnvironment", "photographerImageView"]
+- ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", ""]
+- ["CSo16UIViewController", "UICollectionViewCell"]
+- ["CSo16UIViewController", "UIImageView"]
+- ["CSo16UIViewController", "UILabel"]
+- ["CSo16UIViewController", "UITableView"]
+- ["CSo16UIViewController", "artworkCollectionView"]
+- ["CSo16UIViewController", "commentsTableView"]
+- ["CSo16UIViewController", "didReceiveMemoryWarning"]
+- ["CSo16UIViewController", "init"]
+- ["CSo16UIViewController", "nameLabel"]
+- ["CSo16UIViewController", "photographerImageView"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", ""]
+depends-nominal:
+- "Ps9AnyObject"
+- "Ps11CVarArgType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "Ps8Hashable"
+- "PSo8NSCoding"
+- "PSo26NSExtensionRequestHandling"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "C10Photograph33PhotographerProfileViewController"
+- "PSo21UIAppearanceContainer"
+- "PSo18UIContentContainer"
+- "PSo18UIFocusEnvironment"
+- "CSo11UIResponder"
+- "PSo16UIStateRestoring"
+- "PSo18UITraitEnvironment"
+- "CSo16UIViewController"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreImage.swiftmodule"
+interface-hash: "7b259f76a8dc6de3198181eda1a89e45"

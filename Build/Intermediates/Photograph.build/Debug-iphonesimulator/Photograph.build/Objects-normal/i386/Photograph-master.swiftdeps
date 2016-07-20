@@ -1,7 +1,12 @@
 version: "Apple Swift version 2.2 (swiftlang-703.0.18.1 clang-703.0.29)"
 options: "e9cefea1b1284b4ccecb1e6e158782dc"
-build_time: [522248511, 824626000]
+build_time: [522293733, 136566000]
 inputs:
+  "/Users/Pyee/Swift/photoginer/Photograph/Photographer.swift": [522293496, 0]
+  "/Users/Pyee/Swift/photoginer/Photograph/Service.swift": [9223372036854775807, 0]
+  "/Users/Pyee/Swift/photoginer/Photograph/Package.swift": [522293582, 0]
   "/Users/Pyee/Swift/photoginer/Photograph/PhotographersViewController.swift": [522248511, 0]
+  "/Users/Pyee/Swift/photoginer/Photograph/Customer.swift": [522293660, 0]
   "/Users/Pyee/Swift/photoginer/Photograph/AppDelegate.swift": [521974506, 0]
-  "/Users/Pyee/Swift/photoginer/Photograph/PhotographerProfileVC.swift": [522248339, 0]
+  "/Users/Pyee/Swift/photoginer/Photograph/PhotographerProfileViewController.swift": [522248339, 0]
+  "/Users/Pyee/Swift/photoginer/Photograph/Rating.swift": [522293701, 0]
