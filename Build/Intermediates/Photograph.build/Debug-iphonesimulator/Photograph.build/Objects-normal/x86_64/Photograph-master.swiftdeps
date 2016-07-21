@@ -1,7 +1,0 @@
-version: "Apple Swift version 2.2 (swiftlang-703.0.18.1 clang-703.0.29)"
-options: "842ca2b5689f8583b4a568672b76014b"
-build_time: [521978568, 777670000]
-inputs:
-  "/Users/Pyee/Swift/photoginer/Photograph/ViewController.swift": [521974506, 0]
-  "/Users/Pyee/Swift/photoginer/Photograph/AppDelegate.swift": [521974506, 0]
-  "/Users/Pyee/Swift/photoginer/Photograph/PhotographerProfileVC.swift": [521978568, 0]
