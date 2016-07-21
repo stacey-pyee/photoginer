@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		1E61A4951D3A399700253293 /* PhotographerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E61A4941D3A399700253293 /* PhotographerProfileViewController.swift */; };
 		1EEA94AE1D3F0BF9009DE2DA /* Photographer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA94AD1D3F0BF9009DE2DA /* Photographer.swift */; };
-		1EEA94B01D3F0C4E009DE2DA /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA94AF1D3F0C4E009DE2DA /* Package.swift */; };
+		1EEA94B01D3F0C4E009DE2DA /* PhotoPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA94AF1D3F0C4E009DE2DA /* PhotoPackage.swift */; };
 		1EEA94B21D3F0C9D009DE2DA /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA94B11D3F0C9D009DE2DA /* Customer.swift */; };
 		1EEA94B41D3F0CC5009DE2DA /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA94B31D3F0CC5009DE2DA /* Review.swift */; };
-		1EEA94B61D3F0CE3009DE2DA /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA94B51D3F0CE3009DE2DA /* Service.swift */; };
+		1EEA94B61D3F0CE3009DE2DA /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA94B51D3F0CE3009DE2DA /* PhotoService.swift */; };
 		4095A8EB1D3A1C04008F10A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4095A8EA1D3A1C04008F10A6 /* AppDelegate.swift */; };
 		4095A8ED1D3A1C04008F10A6 /* PhotographersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4095A8EC1D3A1C04008F10A6 /* PhotographersViewController.swift */; };
 		4095A8F01D3A1C04008F10A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4095A8EE1D3A1C04008F10A6 /* Main.storyboard */; };
@@ -42,10 +42,10 @@
 /* Begin PBXFileReference section */
 		1E61A4941D3A399700253293 /* PhotographerProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotographerProfileViewController.swift; sourceTree = "<group>"; };
 		1EEA94AD1D3F0BF9009DE2DA /* Photographer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photographer.swift; sourceTree = "<group>"; };
-		1EEA94AF1D3F0C4E009DE2DA /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		1EEA94AF1D3F0C4E009DE2DA /* PhotoPackage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPackage.swift; sourceTree = "<group>"; };
 		1EEA94B11D3F0C9D009DE2DA /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		1EEA94B31D3F0CC5009DE2DA /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
-		1EEA94B51D3F0CE3009DE2DA /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		1EEA94B51D3F0CE3009DE2DA /* PhotoService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
 		4095A8E71D3A1C04008F10A6 /* Photograph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photograph.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4095A8EA1D3A1C04008F10A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4095A8EC1D3A1C04008F10A6 /* PhotographersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographersViewController.swift; sourceTree = "<group>"; };
@@ -99,10 +99,10 @@
 			isa = PBXGroup;
 			children = (
 				1EEA94AD1D3F0BF9009DE2DA /* Photographer.swift */,
-				1EEA94AF1D3F0C4E009DE2DA /* Package.swift */,
+				1EEA94AF1D3F0C4E009DE2DA /* PhotoPackage.swift */,
 				1EEA94B11D3F0C9D009DE2DA /* Customer.swift */,
 				1EEA94B31D3F0CC5009DE2DA /* Review.swift */,
-				1EEA94B51D3F0CE3009DE2DA /* Service.swift */,
+				1EEA94B51D3F0CE3009DE2DA /* PhotoService.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -291,8 +291,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EEA94AE1D3F0BF9009DE2DA /* Photographer.swift in Sources */,
-				1EEA94B61D3F0CE3009DE2DA /* Service.swift in Sources */,
-				1EEA94B01D3F0C4E009DE2DA /* Package.swift in Sources */,
+				1EEA94B61D3F0CE3009DE2DA /* PhotoService.swift in Sources */,
+				1EEA94B01D3F0C4E009DE2DA /* PhotoPackage.swift in Sources */,
 				4095A8ED1D3A1C04008F10A6 /* PhotographersViewController.swift in Sources */,
 				1EEA94B21D3F0C9D009DE2DA /* Customer.swift in Sources */,
 				4095A8EB1D3A1C04008F10A6 /* AppDelegate.swift in Sources */,
