@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+class Service {
+    enum Type {
+        case Wedding
+        case Event
+        case Commercial
+        case Vacation
+        case Candid
+    }
+}

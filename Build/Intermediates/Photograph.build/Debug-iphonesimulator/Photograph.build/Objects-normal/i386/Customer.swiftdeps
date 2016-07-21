@@ -1,11 +1,26 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
+- "Customer"
 provides-nominal:
+- "C10Photograph8Customer"
 provides-member:
+- ["C10Photograph8Customer", ""]
 provides-dynamic-lookup:
 depends-top-level:
+- "String"
+- "Customer"
 depends-member:
+- !private ["Ps9AnyObject", "contact"]
+- !private ["Ps9AnyObject", "name"]
+- ["Ps9AnyObject", ""]
+- ["C10Photograph8Customer", "String"]
+- ["C10Photograph8Customer", "contact"]
+- ["C10Photograph8Customer", "deinit"]
+- ["C10Photograph8Customer", "init"]
+- ["C10Photograph8Customer", "name"]
 depends-nominal:
+- "Ps9AnyObject"
+- "C10Photograph8Customer"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Swift.swiftmodule"
@@ -16,4 +31,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreImage.swiftmodule"
-interface-hash: "5bf39d8b5f0094ca83c744a0da4fb204"
+interface-hash: "1a2559b56e3f3d9417751a9deffb6c12"

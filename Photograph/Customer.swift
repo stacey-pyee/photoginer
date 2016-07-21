@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+class Customer {
+    var name: String
+    var contact: String
+    
+    init(name: String, contact: String) {
+        self.name = name;
+        self.contact = contact
+    }
+}
