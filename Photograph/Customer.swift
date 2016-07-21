@@ -11,6 +11,7 @@ import Foundation
 class Customer {
     var name: String
     var contact: String
+    var purchasedPackages: [PhotoPackage] = []
     
     init(name: String, contact: String) {
         self.name = name;

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Service {
+class PhotoService {
     enum Type {
         case Wedding
         case Event
