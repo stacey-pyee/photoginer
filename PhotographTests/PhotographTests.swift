@@ -21,6 +21,24 @@ class PhotographTests: XCTestCase {
         super.tearDown()
     }
     
+
+    
+    func testEnum() {
+        let serviceType = PhotoServiceType(rawValue: 2)
+        
+        XCTAssert(serviceType == PhotoServiceType.Commercial)
+        XCTAssert(serviceType != PhotoServiceType.Wedding)
+
+    }
+    
+    func testSearchServiceType (type: String){
+        let searchServiceType: String = type
+        
+        let service1: PhotoServiceType = PhotoServiceType.Wedding
+        let service2: PhotoServiceType = PhotoServiceType.Candid
+        let service3: PhotoServiceType = PhotoServiceType.Commercial
+    }
+    
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
