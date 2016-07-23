@@ -1,9 +1,9 @@
 //
-//  PhotoPackageTests.swift
-//  Photograph
+// PhotoPackageTests.swift
+// Photograph
 //
-//  Created by Pyee on 21/07/2016.
-//  Copyright © 2016 Kingsley Tan. All rights reserved.
+// Created by Pyee on 21/07/2016.
+// Copyright © 2016 Kingsley Tan. All rights reserved.
 //
 
 import XCTest
@@ -11,7 +11,7 @@ import XCTest
 
 class PhotoPackageTests: XCTestCase {
     var packagesAvailable: [PhotoPackage] = []
-
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -21,7 +21,7 @@ class PhotoPackageTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-
+    
     func testSearchPackagesWithPrice() {
         // Create dummy data
         let daniel: Photographer = Photographer.init(name: "Daniel", contact: "012-3456789")
@@ -48,7 +48,7 @@ class PhotoPackageTests: XCTestCase {
         packagesAvailable = [davidPackageA, davidPackageB, danielPackageA, danielPackageB]
         
         let results: [PhotoPackage] = searchForPackagesWithinPriceRange(1000.0)
-        XCTAssert(results.count == 2, "Results count should be 2")
+        XCTAssert(results.count == 2, "Results should be 2")
     }
     
     func searchForPackagesWithinPriceRange(price: Double) -> [PhotoPackage]{
@@ -60,12 +60,12 @@ class PhotoPackageTests: XCTestCase {
         }
         return packagesInRange
     }
-
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measureBlock {
             // Put the code you want to measure the time of here.
         }
     }
-
+    
 }
