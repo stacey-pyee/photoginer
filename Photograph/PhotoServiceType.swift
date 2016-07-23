@@ -8,12 +8,11 @@
 
 import Foundation
 
-class PhotoService {
-    enum Type {
-        case Wedding
-        case Event
-        case Commercial
-        case Vacation
-        case Candid
-    }
+enum PhotoServiceType {
+    case Wedding
+    case Event
+    case Commercial
+    case Vacation
+    case Candid
+    case Unknown
 }

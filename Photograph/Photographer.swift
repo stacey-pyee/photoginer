@@ -15,12 +15,10 @@ class Photographer {
     var email: String?
     var yearOfExperience: Int?
     var artWorks: [UIImage] = []
-    var photoPackages: [PhotoPackage] = []
     var reviews: [Review] = []
     
-    init(name: String, contact: String, photoPackages: [PhotoPackage]) {
+    init(name: String, contact: String) {
         self.name = name
         self.contact = contact
-        self.photoPackages = photoPackages
     }
 }

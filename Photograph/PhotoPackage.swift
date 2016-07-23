@@ -9,14 +9,16 @@
 import Foundation
 
 class PhotoPackage {
+    var name: String
     var price: Double
     var photographer: Photographer
-    var photographService: PhotoService
+    var photoServiceType: PhotoServiceType
     var description: String?
     
-    init(price: Double, photographer: Photographer, photographService: PhotoService) {
+    init(name: String, price: Double, photographer: Photographer, photoServiceType: PhotoServiceType) {
+        self.name = name
         self.price = price
         self.photographer = photographer
-        self.photographService = photographService
+        self.photoServiceType = photoServiceType
     }
 }
