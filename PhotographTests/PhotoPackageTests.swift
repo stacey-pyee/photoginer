@@ -24,8 +24,8 @@ class PhotoPackageTests: XCTestCase {
     
     func testSearchPackagesWithPrice() {
         // Create dummy data
-        let daniel: Photographer = Photographer.init(name: "Daniel", contact: "012-3456789")
-        let david: Photographer = Photographer.init(name: "David", contact: "013-23412332")
+        let daniel: Photographer = Photographer.init(name: "Daniel", contact: "012-3456789", yearOfExperience: 5)
+        let david: Photographer = Photographer.init(name: "David", contact: "013-23412332", yearOfExperience: 2)
         
         let danielPackageA: PhotoPackage = PhotoPackage.init(name: "Model Feel",
                                                              price: 200.0,
