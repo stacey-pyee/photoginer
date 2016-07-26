@@ -16,12 +16,14 @@ class Photographer {
     var yearOfExperience: Int?
     var artWorks: [UIImage] = []
     var reviews: [Review] = []
+    var photo: UIImage?
 
     
     init(name: String, contact: String, yearOfExperience: Int) {
         self.name = name
         self.contact = contact
         self.yearOfExperience = yearOfExperience
+
     }
     
 }
