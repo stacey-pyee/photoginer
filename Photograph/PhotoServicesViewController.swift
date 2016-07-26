@@ -6,4 +6,64 @@
 //  Copyright © 2016 Kingsley Tan. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class PhotoServicesViewController: UIViewController {
+
+    @IBOutlet weak var photoServicesUITableView: UITableView!
+    var packagesAvailable: [PhotoPackage] = []
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.photoServicesUITableView.dataSource = self
+        self.photoServicesUITableView.delegate = self
+        createDummyData()
+    }
+    
+    func createDummyData() {
+        let daniel: Photographer = Photographer.init(name: "Daniel", contact: "012-3456789", yearOfExperience: 5)
+        let david: Photographer = Photographer.init(name: "David", contact: "013-23412332", yearOfExperience: 2)
+        
+        let danielPackageA: PhotoPackage = PhotoPackage.init(name: "Model Feel",
+                                                             price: 200.0,
+                                                             photographer: daniel,
+                                                             photoServiceType: PhotoServiceType.Candid)
+        let danielPackageB: PhotoPackage = PhotoPackage.init(name:"Event Package",
+                                                             price: 1500.0,
+                                                             photographer: daniel,
+                                                             photoServiceType: PhotoServiceType.Event)
+        
+        let davidPackageA: PhotoPackage = PhotoPackage.init(name:"Happily Ever After",
+                                                            price: 2000.0,
+                                                            photographer: david,
+                                                            photoServiceType: PhotoServiceType.Wedding)
+        let davidPackageB: PhotoPackage = PhotoPackage.init(name: "Fame",
+                                                            price: 300.0,
+                                                            photographer: david,
+                                                            photoServiceType: PhotoServiceType.Commercial)
+        
+        packagesAvailable = [davidPackageA, davidPackageB, danielPackageA, danielPackageB]
+
+    }
+}
+
+extension PhotoServicesViewController: UITableViewDelegate {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let photoPackageViewController: PhotoPackageDetailsViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PhotoPackageDetailsViewController") as! PhotoPackageDetailsViewController
+        self.navigationController?.pushViewController(photoPackageViewController, animated: true)
+    }
+}
+
+extension PhotoServicesViewController: UITableViewDataSource {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return packagesAvailable.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = UITableViewCell()
+        let packageName: String = self.packagesAvailable[indexPath.row].name
+        cell.textLabel?.text = packageName
+        return cell
+
+    }
+}
