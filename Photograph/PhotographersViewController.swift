@@ -34,9 +34,13 @@ class PhotographersViewController: UIViewController {
     
     func createDummyData() {
         let photographer1: Photographer = Photographer(name: "Adam", contact: "0109999991", yearOfExperience: 3)
+        photographer1.photo = UIImage(named: "Adam")
         let photographer2: Photographer = Photographer(name: "Bob", contact: "0109999992", yearOfExperience: 5)
+        photographer2.photo = UIImage(named: "Bob")
         let photographer3: Photographer = Photographer(name: "Catherine", contact: "0109999993", yearOfExperience: 1)
+        photographer3.photo = UIImage(named: "Catherine")
         let photographer4: Photographer = Photographer(name: "Jane", contact: "0109999994", yearOfExperience: 10)
+        photographer4.photo = UIImage(named: "Jane")
         photographerList = [photographer1, photographer2, photographer3, photographer4]
     }
     
@@ -59,9 +63,10 @@ extension PhotographersViewController: UITableViewDataSource{
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = UITableViewCell()
-        let photographerName: String = self.photographerList[indexPath.row].name
-        cell.textLabel?.text = photographerName
+        let cell: UITableViewCell = UITableViewCell(style: .Subtitle, reuseIdentifier:  "Cell")
+        let photographer: Photographer = self.photographerList[indexPath.row]
+        cell.textLabel?.text = photographer.name
+        cell.imageView?.image = photographer.photo
         return cell
     }
 }
