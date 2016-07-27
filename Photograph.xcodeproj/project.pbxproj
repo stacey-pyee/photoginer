@@ -98,14 +98,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E8E7BAB1D48BB0D00757FD1 /* PhotoService */ = {
+			isa = PBXGroup;
+			children = (
+				1E8E7BA71D4780E900757FD1 /* PhotoServicesViewController.swift */,
+				1E8E7BA91D47964800757FD1 /* PhotoPackageDetailsViewController.swift */,
+			);
+			name = PhotoService;
+			sourceTree = "<group>";
+		};
 		1EEA94A91D3E58DA009DE2DA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1E8E7BAB1D48BB0D00757FD1 /* PhotoService */,
 				4095A8EC1D3A1C04008F10A6 /* PhotographersViewController.swift */,
 				40DE3E8C1D4319E300541C58 /* PhotographerProfileSummaryViewController.swift */,
 				1E61A4941D3A399700253293 /* PhotographerProfileViewController.swift */,
-				1E8E7BA71D4780E900757FD1 /* PhotoServicesViewController.swift */,
-				1E8E7BA91D47964800757FD1 /* PhotoPackageDetailsViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
