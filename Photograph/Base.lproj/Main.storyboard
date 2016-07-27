@@ -150,7 +150,7 @@
         <scene sceneID="ztf-AK-NI5">
             <objects>
                 <navigationController id="cZg-Mh-3nj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Photographers" id="dhD-Ka-Yk2"/>
+                    <tabBarItem key="tabBarItem" title="Photographers" image="photographer-icon" id="dhD-Ka-Yk2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kRq-Jp-2Lg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -173,7 +173,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ORk-lS-0lX">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ORk-lS-0lX" id="p9g-al-0ZI">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -196,7 +196,7 @@
         <scene sceneID="rKk-YA-3gA">
             <objects>
                 <navigationController id="e4d-oE-uGB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Services" id="COL-Ek-7no"/>
+                    <tabBarItem key="tabBarItem" title="Services" image="service-icon" id="COL-Ek-7no"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="h5Q-tH-Blw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -288,7 +288,7 @@
         <scene sceneID="ICU-zB-kf5">
             <objects>
                 <navigationController id="hM8-cd-aXj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" id="XTK-3C-JLP"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile-icon" id="XTK-3C-JLP"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YOI-zK-eyQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -440,4 +440,9 @@
             <point key="canvasLocation" x="-1794" y="4228"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="photographer-icon" width="30" height="30"/>
+        <image name="profile-icon" width="30" height="30"/>
+        <image name="service-icon" width="30" height="30"/>
+    </resources>
 </document>
