@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Photographers View Controller-->
+        <!--Photographers-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="PhotographersViewController" customModule="Photograph" customModuleProvider="target" sceneMemberID="viewController">
@@ -43,7 +43,7 @@
                             <constraint firstItem="rrc-1f-yfL" firstAttribute="top" secondItem="lAe-ju-kaF" secondAttribute="bottom" id="xh2-tj-BWT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="nlp-Wc-Eoa"/>
+                    <navigationItem key="navigationItem" title="Photographers" id="nlp-Wc-Eoa"/>
                     <connections>
                         <outlet property="photographerSearchBar" destination="lAe-ju-kaF" id="Nqe-oI-SOT"/>
                         <outlet property="photographerTableView" destination="rrc-1f-yfL" id="3nD-FM-4WG"/>
@@ -209,7 +209,7 @@
             </objects>
             <point key="canvasLocation" x="-352" y="1171"/>
         </scene>
-        <!--Photo Services View Controller-->
+        <!--Services-->
         <scene sceneID="k76-ev-dI6">
             <objects>
                 <viewController id="C3V-bE-Jld" customClass="PhotoServicesViewController" customModule="Photograph" customModuleProvider="target" sceneMemberID="viewController">
@@ -228,7 +228,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fa6-Wv-phI"/>
+                    <navigationItem key="navigationItem" title="Services" id="fa6-Wv-phI"/>
                     <connections>
                         <outlet property="photoServicesUITableView" destination="CPN-LE-hwW" id="Lkp-eN-uA0"/>
                     </connections>
@@ -259,16 +259,20 @@
         <scene sceneID="8er-9o-FgW">
             <objects>
                 <tableViewController id="6yZ-28-CsF" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="giJ-fY-sJh">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="1" sectionHeaderHeight="28" sectionFooterHeight="28" id="giJ-fY-sJh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <imageView key="tableFooterView" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-1" id="5gO-hz-rr4">
+                            <rect key="frame" x="0.0" y="93" width="600" height="167"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="DCX-Q8-Kdo">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="1" id="DCX-Q8-Kdo">
+                                <rect key="frame" x="0.0" y="92" width="600" height="1"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DCX-Q8-Kdo" id="nRH-hB-0Ft">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="0.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -281,6 +285,14 @@
                     <navigationItem key="navigationItem" title="Profile" id="sk0-l3-xrQ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U4W-Xp-bnB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="rct-Op-Nhh">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </objects>
             <point key="canvasLocation" x="-1254" y="3389"/>
         </scene>
@@ -442,6 +454,7 @@
     </scenes>
     <resources>
         <image name="photographer-icon" width="30" height="30"/>
+        <image name="profile-1" width="271" height="271"/>
         <image name="profile-icon" width="30" height="30"/>
         <image name="service-icon" width="30" height="30"/>
     </resources>
