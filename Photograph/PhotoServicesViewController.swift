@@ -45,12 +45,23 @@ class PhotoServicesViewController: UIViewController {
         packagesAvailable = [davidPackageA, davidPackageB, danielPackageA, danielPackageB]
 
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "showPhotoPackageDetailsViewController") {
+            let destVC: PhotoPackageDetailsViewController = segue.destinationViewController as! PhotoPackageDetailsViewController
+            if let selectedIndex = self.photoServicesUITableView.indexPathForSelectedRow {
+                let photoPackage:PhotoPackage = self.packagesAvailable[selectedIndex.row]
+                destVC.photoPackage = photoPackage
+            }
+            
+        }
+    }
 }
 
 extension PhotoServicesViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let photoPackageViewController: PhotoPackageDetailsViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PhotoPackageDetailsViewController") as! PhotoPackageDetailsViewController
-        self.navigationController?.pushViewController(photoPackageViewController, animated: true)
+//        let photoPackageViewController: PhotoPackageDetailsViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PhotoPackageDetailsViewController") as! PhotoPackageDetailsViewController
+//        self.navigationController?.pushViewController(photoPackageViewController, animated: true)
     }
 }
 

@@ -10,5 +10,10 @@ import Foundation
 import UIKit
 
 class PhotoPackageDetailsViewController: UIViewController {
+    var photoPackage: PhotoPackage!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print(photoPackage.name)
+    }
 }
