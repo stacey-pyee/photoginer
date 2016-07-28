@@ -60,11 +60,10 @@ extension PhotoServicesViewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = self.photoServicesUITableView.dequeueReusableCellWithIdentifier("ServicePackageCell", forIndexPath: indexPath)
+        let cell: PhotoPackageTableViewCell = self.photoServicesUITableView.dequeueReusableCellWithIdentifier("PhotoPackageCell", forIndexPath: indexPath) as! PhotoPackageTableViewCell
         
         let servicePackage: PhotoPackage = self.packagesAvailable[indexPath.row]
-        let packageName: String = servicePackage.name
-        cell.textLabel?.text = packageName
+        cell.photoPackage = servicePackage
         return cell
 
     }
