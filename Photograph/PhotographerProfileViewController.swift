@@ -9,6 +9,7 @@
 import UIKit
 
 class PhotographerProfileViewController: UIViewController {
+    var photographer: Photographer!
     @IBOutlet weak var photographerImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var artworkCollectionView: UICollectionViewCell!

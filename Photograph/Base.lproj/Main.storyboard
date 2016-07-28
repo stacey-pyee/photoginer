@@ -43,7 +43,13 @@
                             <constraint firstItem="rrc-1f-yfL" firstAttribute="top" secondItem="lAe-ju-kaF" secondAttribute="bottom" id="xh2-tj-BWT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="nlp-Wc-Eoa"/>
+                    <navigationItem key="navigationItem" id="nlp-Wc-Eoa">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="mha-cl-lkd">
+                            <connections>
+                                <segue destination="yKx-eT-mWB" kind="presentation" id="mA5-Qk-jvY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="photographerSearchBar" destination="lAe-ju-kaF" id="Nqe-oI-SOT"/>
                         <outlet property="photographerTableView" destination="rrc-1f-yfL" id="3nD-FM-4WG"/>
@@ -53,6 +59,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2508" y="3389"/>
+        </scene>
+        <!--Add Photographer-->
+        <scene sceneID="Nvg-Ow-nZ5">
+            <objects>
+                <viewController id="yKx-eT-mWB" customClass="AddPhotographer" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ofM-PW-7Ru"/>
+                        <viewControllerLayoutGuide type="bottom" id="OFa-o0-qTr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WqE-MX-A15">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Name Here:" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="flg-MU-sKY">
+                                <rect key="frame" x="20" y="58" width="387" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="aOs-Ms-xlE"/>
+                                    <constraint firstAttribute="width" constant="387" id="ene-n7-dFo"/>
+                                </constraints>
+                                <color key="textColor" red="0.57389152486910988" green="0.57389152486910988" blue="0.57389152486910988" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cau-3G-Zz1">
+                                <rect key="frame" x="228" y="102" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6SV-P9-GFr"/>
+                                    <constraint firstAttribute="width" constant="46" id="OIC-19-CRV"/>
+                                </constraints>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <segue destination="U8f-Qy-tSO" kind="unwind" unwindAction="unwindToPhotographersViewController:" id="d7N-J7-Uol"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHu-6w-oRN">
+                                <rect key="frame" x="335" y="102" width="72" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="72" id="WBR-71-OpK"/>
+                                    <constraint firstAttribute="height" constant="30" id="f23-em-Lui"/>
+                                </constraints>
+                                <state key="normal" title="Cancel"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="flg-MU-sKY" firstAttribute="leading" secondItem="WqE-MX-A15" secondAttribute="leadingMargin" id="3Jh-aa-l1g"/>
+                            <constraint firstItem="lHu-6w-oRN" firstAttribute="top" secondItem="flg-MU-sKY" secondAttribute="bottom" constant="14" id="C6b-dr-9Ab"/>
+                            <constraint firstItem="flg-MU-sKY" firstAttribute="top" secondItem="ofM-PW-7Ru" secondAttribute="bottom" constant="38" id="G9B-Cy-tvb"/>
+                            <constraint firstItem="flg-MU-sKY" firstAttribute="centerX" secondItem="WqE-MX-A15" secondAttribute="centerX" id="Ggc-I4-csc"/>
+                            <constraint firstItem="lHu-6w-oRN" firstAttribute="leading" secondItem="Cau-3G-Zz1" secondAttribute="trailing" constant="61" id="XXL-9s-ZF9"/>
+                            <constraint firstItem="flg-MU-sKY" firstAttribute="centerY" secondItem="WqE-MX-A15" secondAttribute="centerY" id="iJw-Cj-SaH"/>
+                            <constraint firstItem="Cau-3G-Zz1" firstAttribute="leading" secondItem="WqE-MX-A15" secondAttribute="leadingMargin" constant="208" id="iqh-6U-ria"/>
+                            <constraint firstItem="Cau-3G-Zz1" firstAttribute="top" secondItem="flg-MU-sKY" secondAttribute="bottom" constant="14" id="mXg-o3-L2z"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xo7-pb-di1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="U8f-Qy-tSO" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-3412" y="4262"/>
         </scene>
         <!--Photographer Profile Summary View Controller-->
         <scene sceneID="ATz-LU-Fnt">
@@ -76,41 +142,16 @@
                                     <constraint firstAttribute="height" constant="492" id="QKj-an-1Hd"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="123" id="UPb-1R-Yhg">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="123" id="UPb-1R-Yhg" customClass="PhotographerCell">
                                         <rect key="frame" x="0.0" y="92" width="600" height="123"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UPb-1R-Yhg" id="MF4-bE-ZCb">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="122"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gBT-oi-QCd">
-                                                    <rect key="frame" x="0.0" y="-7" width="600" height="135"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="135" id="27E-q4-xCJ"/>
-                                                        <constraint firstAttribute="height" constant="135" id="c8Z-Uj-gk7"/>
-                                                        <constraint firstAttribute="width" constant="600" id="v0i-Rg-6P5"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUF-yX-dZe">
-                                                    <rect key="frame" x="0.0" y="81" width="600" height="41"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="600" id="2ms-fw-PWK"/>
-                                                        <constraint firstAttribute="height" constant="41" id="M0H-oi-zqm"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="hUF-yX-dZe" firstAttribute="leading" secondItem="MF4-bE-ZCb" secondAttribute="leadingMargin" constant="-8" id="2AQ-jL-OLd"/>
-                                                <constraint firstItem="gBT-oi-QCd" firstAttribute="leading" secondItem="MF4-bE-ZCb" secondAttribute="leadingMargin" constant="-8" id="DKe-ES-fqT"/>
-                                                <constraint firstItem="gBT-oi-QCd" firstAttribute="leading" secondItem="MF4-bE-ZCb" secondAttribute="leadingMargin" constant="-8" id="TSF-Bx-GVe"/>
-                                                <constraint firstItem="hUF-yX-dZe" firstAttribute="top" secondItem="MF4-bE-ZCb" secondAttribute="topMargin" constant="73" id="ceq-fG-APz"/>
-                                                <constraint firstItem="gBT-oi-QCd" firstAttribute="top" secondItem="MF4-bE-ZCb" secondAttribute="topMargin" constant="-15" id="gz9-P1-yEY"/>
-                                                <constraint firstItem="gBT-oi-QCd" firstAttribute="top" secondItem="MF4-bE-ZCb" secondAttribute="topMargin" constant="-15" id="mbo-A9-AfX"/>
-                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="qrb-AK-sji" kind="show" identifier="showPhotographerDetailsViewController" id="DVz-N5-Quy"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="default">
@@ -391,7 +432,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mpH-Ik-y14" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1794" y="4228"/>
+            <point key="canvasLocation" x="-2508" y="5052"/>
         </scene>
     </scenes>
 </document>
