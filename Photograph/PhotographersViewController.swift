@@ -8,6 +8,15 @@
 
 import UIKit
 
+/* DELEGATE PASSING
+ 
+ protocol AddPhotographerDelegate {
+    func viewController(vc: PhotographersViewController, didAddPhotographer photographer: Photographer!)
+    // func viewControllerDidCancelAddingPhotographer(vc: PhotographersViewController, didAddPhotographer photographer: Photographer!)
+}
+
+*/
+ 
 class PhotographersViewController: UIViewController {
     
     @IBOutlet weak var photographerTableView: UITableView!
