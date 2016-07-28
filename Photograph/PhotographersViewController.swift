@@ -55,6 +55,26 @@ class PhotographersViewController: UIViewController {
         }
         return searchPhotographer
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showPhotographerDetailsViewController"{
+            let destVC: PhotographerProfileViewController = segue.destinationViewController as! PhotographerProfileViewController
+            if let selectedIndexPath = self.photographerTableView.indexPathForSelectedRow{
+                let photographer: Photographer = self.photographerList[selectedIndexPath.row]
+                destVC.photographer = photographer
+            }
+        }
+    }
+    
+    @IBAction func unwindToPhotographersViewController(segue: UIStoryboardSegue){
+        if let addPhotographerVC: AddPhotographerViewController = segue.sourceViewController as? AddPhotographerViewController{
+            if let photographer = addPhotographerVC.photographer{
+                self.photographerList.append(photographer)
+                self.photographerTableView.reloadData()
+            }
+        }
+    }
+
 }
 
 extension PhotographersViewController: UITableViewDataSource{
@@ -63,7 +83,7 @@ extension PhotographersViewController: UITableViewDataSource{
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = UITableViewCell(style: .Subtitle, reuseIdentifier:  "Cell")
+        let cell: UITableViewCell = self.photographerTableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath:  indexPath)
         let photographer: Photographer = self.photographerList[indexPath.row]
         cell.textLabel?.text = photographer.name
         cell.imageView?.image = photographer.photo
