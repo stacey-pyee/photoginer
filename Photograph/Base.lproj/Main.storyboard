@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wGI-iV-YeK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wGI-iV-YeK">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -176,7 +176,7 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ORk-lS-0lX" id="p9g-al-0ZI">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -229,7 +229,7 @@
                                         <rect key="frame" x="0.0" y="92" width="600" height="117"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QT4-3e-PhW" id="HHz-oI-oYz">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="117"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="116.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDI-Vc-DFF">
@@ -257,7 +257,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Services" id="fa6-Wv-phI"/>
+                    <navigationItem key="navigationItem" title="Services" id="fa6-Wv-phI">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="unF-mN-DsF">
+                            <connections>
+                                <segue destination="tvd-fy-g6B" kind="presentation" id="tdn-qm-CpN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="photoServicesUITableView" destination="CPN-LE-hwW" id="Lkp-eN-uA0"/>
                     </connections>
@@ -265,6 +271,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mIt-XQ-qNq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="435" y="1598"/>
+        </scene>
+        <!--Add Package View Controller-->
+        <scene sceneID="GEg-zw-81Y">
+            <objects>
+                <viewController id="tvd-fy-g6B" customClass="AddPackageViewController" customModule="Photograph" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hVS-2L-Uyp"/>
+                        <viewControllerLayoutGuide type="bottom" id="esP-J3-vDf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eW8-5J-orP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bz-jR-6YX">
+                                <rect key="frame" x="540" y="28" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iDF-Ah-K7s">
+                                <rect key="frame" x="20" y="29" width="427" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHx-IB-vH1">
+                                <rect key="frame" x="488" y="28" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iDF-Ah-K7s" firstAttribute="top" secondItem="hVS-2L-Uyp" secondAttribute="bottom" constant="20" id="CS1-KD-oEx"/>
+                            <constraint firstItem="iDF-Ah-K7s" firstAttribute="top" secondItem="hVS-2L-Uyp" secondAttribute="bottom" constant="20" id="GUd-vi-uj8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1bz-jR-6YX" secondAttribute="trailing" constant="20" id="MTf-oj-eTP"/>
+                            <constraint firstItem="xHx-IB-vH1" firstAttribute="leading" secondItem="iDF-Ah-K7s" secondAttribute="trailing" constant="8" id="ahh-Le-McY"/>
+                            <constraint firstItem="1bz-jR-6YX" firstAttribute="leading" secondItem="xHx-IB-vH1" secondAttribute="trailing" constant="8" id="ehA-eF-aAp"/>
+                            <constraint firstItem="xHx-IB-vH1" firstAttribute="top" secondItem="hVS-2L-Uyp" secondAttribute="bottom" constant="20" id="hAM-50-5ue"/>
+                            <constraint firstItem="1bz-jR-6YX" firstAttribute="top" secondItem="hVS-2L-Uyp" secondAttribute="bottom" constant="20" id="jsX-1I-xjR"/>
+                            <constraint firstItem="iDF-Ah-K7s" firstAttribute="leading" secondItem="eW8-5J-orP" secondAttribute="leadingMargin" id="llR-u9-lxr"/>
+                            <constraint firstItem="iDF-Ah-K7s" firstAttribute="leading" secondItem="eW8-5J-orP" secondAttribute="leadingMargin" constant="20" id="rJu-DJ-lmb"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="llR-u9-lxr"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="0i2-he-AAa"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZaV-3H-u08" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="416" y="2312"/>
         </scene>
         <!--Photo Package Details View Controller-->
         <scene sceneID="Qi0-we-cxC">
