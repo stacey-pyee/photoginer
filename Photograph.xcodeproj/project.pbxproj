@@ -19,7 +19,6 @@
 		1EEA94B21D3F0C9D009DE2DA /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA94B11D3F0C9D009DE2DA /* Customer.swift */; };
 		1EEA94B41D3F0CC5009DE2DA /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA94B31D3F0CC5009DE2DA /* Review.swift */; };
 		1EEA94B61D3F0CE3009DE2DA /* PhotoServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA94B51D3F0CE3009DE2DA /* PhotoServiceType.swift */; };
-		400BAB901D4A45C500025F15 /* temp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 400BAB8F1D4A45C400025F15 /* temp.storyboard */; };
 		400BAB971D4A482400025F15 /* Photographer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 400BAB911D4A482400025F15 /* Photographer.storyboard */; };
 		400BAB981D4A482400025F15 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 400BAB931D4A482400025F15 /* Profile.storyboard */; };
 		400BAB991D4A482400025F15 /* Service.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 400BAB951D4A482400025F15 /* Service.storyboard */; };
@@ -67,7 +66,6 @@
 		1EEA94B11D3F0C9D009DE2DA /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		1EEA94B31D3F0CC5009DE2DA /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		1EEA94B51D3F0CE3009DE2DA /* PhotoServiceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoServiceType.swift; sourceTree = "<group>"; };
-		400BAB8F1D4A45C400025F15 /* temp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = temp.storyboard; sourceTree = "<group>"; };
 		400BAB921D4A482400025F15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Photographer.storyboard; sourceTree = "<group>"; };
 		400BAB941D4A482400025F15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		400BAB961D4A482400025F15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Service.storyboard; sourceTree = "<group>"; };
@@ -179,7 +177,6 @@
 				400BAB911D4A482400025F15 /* Photographer.storyboard */,
 				400BAB931D4A482400025F15 /* Profile.storyboard */,
 				400BAB951D4A482400025F15 /* Service.storyboard */,
-				400BAB8F1D4A45C400025F15 /* temp.storyboard */,
 				1EEA94AA1D3F0B80009DE2DA /* Model */,
 				1EEA94A91D3E58DA009DE2DA /* ViewController */,
 				4095A8F11D3A1C04008F10A6 /* Assets.xcassets */,
@@ -314,7 +311,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				400BAB991D4A482400025F15 /* Service.storyboard in Resources */,
-				400BAB901D4A45C500025F15 /* temp.storyboard in Resources */,
 				400BAB971D4A482400025F15 /* Photographer.storyboard in Resources */,
 				400BAB981D4A482400025F15 /* Profile.storyboard in Resources */,
 				4095A8F51D3A1C04008F10A6 /* LaunchScreen.storyboard in Resources */,
