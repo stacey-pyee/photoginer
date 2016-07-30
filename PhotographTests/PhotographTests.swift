@@ -31,7 +31,8 @@ class PhotographTests: XCTestCase {
 
     }
     
-    func testSearchServiceType (type: String){
+    func testSearchServiceType (){
+        let type: String = "anything"
         let searchServiceType: String = type
         
         let service1: PhotoServiceType = PhotoServiceType.Wedding

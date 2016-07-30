@@ -34,7 +34,8 @@ class PhotographerSearchTests: XCTestCase {
     
     
 
-    func testSearchYrOfExp (search: Int){
+    func testSearchYrOfExp (){
+        var search: Int = 2
         var searchPhotographer: [Photographer] = []
         let searchYrOfExp: Int = search
         let expectedPhotographer: Photographer = dummyPhotographerList[1]
