@@ -102,8 +102,6 @@ extension PhotographersViewController: UITableViewDataSource{
 
 extension PhotographersViewController: UITableViewDelegate{
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("User tapped on \((indexPath.row))")
-        
         let photographerProfileViewVC: PhotographerProfileViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PhotographerProfileViewController") as! PhotographerProfileViewController
         self.navigationController?.pushViewController(photographerProfileViewVC, animated: true)
     }
