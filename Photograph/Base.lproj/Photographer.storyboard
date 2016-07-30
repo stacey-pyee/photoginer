@@ -168,52 +168,35 @@
                                     <constraint firstAttribute="width" constant="240" id="6AC-Pe-UO9"/>
                                 </constraints>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="n5b-0i-4Z1">
-                                <rect key="frame" x="0.0" y="196" width="600" height="193"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="193" id="faL-dC-4eY"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="e5I-B3-4pQ">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                            </collectionView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VGx-xM-9dB">
-                                <rect key="frame" x="0.0" y="397" width="600" height="203"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2E-Ih-PSN">
+                                <rect key="frame" x="12" y="218" width="84" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancel:" destination="DTa-sW-n1Y" eventType="touchUpInside" id="vdn-zB-6Nr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="dfR-Jq-dCa" firstAttribute="leading" secondItem="xwa-Wk-e62" secondAttribute="trailing" constant="20" id="7lt-KN-VSe"/>
                             <constraint firstItem="9MH-yq-yDX" firstAttribute="trailing" secondItem="el1-om-olX" secondAttribute="trailing" id="85y-pi-QBt"/>
-                            <constraint firstItem="9MH-yq-yDX" firstAttribute="trailing" secondItem="n5b-0i-4Z1" secondAttribute="trailing" id="FEW-7G-XDd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="el1-om-olX" secondAttribute="trailing" constant="20" id="FbZ-ck-NHQ"/>
                             <constraint firstItem="el1-om-olX" firstAttribute="trailing" secondItem="dfR-Jq-dCa" secondAttribute="trailing" id="GPN-w8-kEE"/>
                             <constraint firstItem="xwa-Wk-e62" firstAttribute="leading" secondItem="Neq-D3-nMo" secondAttribute="leadingMargin" constant="20" id="H0j-Rg-aWI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dfR-Jq-dCa" secondAttribute="trailing" constant="20" id="HEY-7F-XRF"/>
                             <constraint firstItem="xwa-Wk-e62" firstAttribute="top" secondItem="9MH-yq-yDX" secondAttribute="bottom" constant="20" id="HTv-AM-gLF"/>
-                            <constraint firstItem="9MH-yq-yDX" firstAttribute="trailing" secondItem="VGx-xM-9dB" secondAttribute="trailing" id="IVP-aS-xXL"/>
                             <constraint firstAttribute="trailing" secondItem="9MH-yq-yDX" secondAttribute="trailing" id="LeT-b9-EGg"/>
                             <constraint firstItem="5lt-kP-h32" firstAttribute="top" secondItem="xwa-Wk-e62" secondAttribute="bottom" constant="418" id="OO2-Tl-Xq9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="el1-om-olX" secondAttribute="trailing" constant="20" id="OPe-JG-uxz"/>
-                            <constraint firstItem="9MH-yq-yDX" firstAttribute="leading" secondItem="VGx-xM-9dB" secondAttribute="leading" id="OdU-gu-UkL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="el1-om-olX" secondAttribute="trailing" constant="20" id="Tgb-NZ-Sa6"/>
                             <constraint firstItem="dfR-Jq-dCa" firstAttribute="top" secondItem="el1-om-olX" secondAttribute="bottom" constant="6" id="Vmd-o3-b80"/>
                             <constraint firstItem="el1-om-olX" firstAttribute="trailing" secondItem="9MH-yq-yDX" secondAttribute="trailing" id="W8h-ff-mX3"/>
-                            <constraint firstItem="VGx-xM-9dB" firstAttribute="bottom" secondItem="5lt-kP-h32" secondAttribute="top" id="XMY-6h-OH2"/>
                             <constraint firstItem="el1-om-olX" firstAttribute="leading" secondItem="xwa-Wk-e62" secondAttribute="trailing" constant="20" id="XcX-li-LVR"/>
                             <constraint firstItem="9MH-yq-yDX" firstAttribute="leading" secondItem="Neq-D3-nMo" secondAttribute="leading" id="Yvc-Zi-InD"/>
                             <constraint firstItem="xwa-Wk-e62" firstAttribute="leading" secondItem="Neq-D3-nMo" secondAttribute="leadingMargin" constant="-20" id="dVX-5G-Rsb"/>
                             <constraint firstItem="9MH-yq-yDX" firstAttribute="trailing" secondItem="el1-om-olX" secondAttribute="trailing" id="ghP-6C-xqJ"/>
-                            <constraint firstItem="n5b-0i-4Z1" firstAttribute="top" secondItem="xwa-Wk-e62" secondAttribute="bottom" constant="22" id="iZq-Vo-1Tf"/>
                             <constraint firstItem="dfR-Jq-dCa" firstAttribute="top" secondItem="el1-om-olX" secondAttribute="bottom" constant="6" id="juS-77-8rp"/>
-                            <constraint firstItem="VGx-xM-9dB" firstAttribute="top" secondItem="n5b-0i-4Z1" secondAttribute="bottom" constant="8" symbolic="YES" id="kpA-A5-o1I"/>
                             <constraint firstItem="el1-om-olX" firstAttribute="leading" secondItem="xwa-Wk-e62" secondAttribute="trailing" constant="20" id="pyp-13-6lD"/>
-                            <constraint firstItem="9MH-yq-yDX" firstAttribute="leading" secondItem="n5b-0i-4Z1" secondAttribute="leading" id="qo7-IL-szP"/>
                             <constraint firstAttribute="trailing" secondItem="9MH-yq-yDX" secondAttribute="trailing" id="r5S-hI-M4v"/>
                             <constraint firstItem="9MH-yq-yDX" firstAttribute="top" secondItem="Neq-D3-nMo" secondAttribute="top" id="s1m-ut-W7q"/>
                             <constraint firstItem="9MH-yq-yDX" firstAttribute="trailing" secondItem="dfR-Jq-dCa" secondAttribute="trailing" id="uuu-xN-xoj"/>
@@ -242,7 +225,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="commentsTableView" destination="VGx-xM-9dB" id="Ka7-Jx-NsK"/>
+                        <outlet property="cancel" destination="N2E-Ih-PSN" id="KMz-Jt-kvM"/>
                         <outlet property="nameLabel" destination="dfR-Jq-dCa" id="xaj-0t-EOm"/>
                         <outlet property="photographerImageView" destination="xwa-Wk-e62" id="6Ud-zm-jBL"/>
                     </connections>

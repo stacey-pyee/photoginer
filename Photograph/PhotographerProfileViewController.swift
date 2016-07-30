@@ -12,8 +12,9 @@ class PhotographerProfileViewController: UIViewController {
     var photographer: Photographer!
     @IBOutlet weak var photographerImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var artworkCollectionView: UICollectionViewCell!
+   // @IBOutlet weak var artworkCollectionView: [] !
     
+    @IBOutlet weak var cancel: UIButton!
     @IBOutlet weak var commentsTableView: UITableView!
     
     override func viewDidLoad() {
@@ -24,4 +25,9 @@ class PhotographerProfileViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func cancel(sender: UIButton) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+
 }
