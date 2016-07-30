@@ -124,11 +124,8 @@
 		1EEA94A91D3E58DA009DE2DA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				407DC3591D4C9D0F00706E06 /* Photographer */,
 				1E8E7BAB1D48BB0D00757FD1 /* PhotoService */,
-				4095A8EC1D3A1C04008F10A6 /* PhotographersViewController.swift */,
-				40DE3E8C1D4319E300541C58 /* PhotographerProfileSummaryViewController.swift */,
-				1E61A4941D3A399700253293 /* PhotographerProfileViewController.swift */,
-				403242171D47984600911186 /* AddPhotographer.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -143,6 +140,17 @@
 				1EEA94B51D3F0CE3009DE2DA /* PhotoServiceType.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		407DC3591D4C9D0F00706E06 /* Photographer */ = {
+			isa = PBXGroup;
+			children = (
+				4095A8EC1D3A1C04008F10A6 /* PhotographersViewController.swift */,
+				40DE3E8C1D4319E300541C58 /* PhotographerProfileSummaryViewController.swift */,
+				1E61A4941D3A399700253293 /* PhotographerProfileViewController.swift */,
+				403242171D47984600911186 /* AddPhotographer.swift */,
+			);
+			name = Photographer;
 			sourceTree = "<group>";
 		};
 		4095A8DE1D3A1C04008F10A6 = {
