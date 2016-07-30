@@ -29,7 +29,6 @@
 		4095A8F51D3A1C04008F10A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4095A8F31D3A1C04008F10A6 /* LaunchScreen.storyboard */; };
 		4095A9001D3A1C05008F10A6 /* PhotographTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4095A8FF1D3A1C05008F10A6 /* PhotographTests.swift */; };
 		4095A90B1D3A1C05008F10A6 /* PhotographUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4095A90A1D3A1C05008F10A6 /* PhotographUITests.swift */; };
-		40DE3E8D1D4319E300541C58 /* PhotographerProfileSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DE3E8C1D4319E300541C58 /* PhotographerProfileSummaryViewController.swift */; };
 		40DE3E8F1D43558800541C58 /* PhotographerSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DE3E8E1D43558800541C58 /* PhotographerSearchTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -79,7 +78,6 @@
 		4095A9061D3A1C05008F10A6 /* PhotographUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotographUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4095A90A1D3A1C05008F10A6 /* PhotographUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographUITests.swift; sourceTree = "<group>"; };
 		4095A90C1D3A1C05008F10A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		40DE3E8C1D4319E300541C58 /* PhotographerProfileSummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotographerProfileSummaryViewController.swift; sourceTree = "<group>"; };
 		40DE3E8E1D43558800541C58 /* PhotographerSearchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotographerSearchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,7 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				4095A8EC1D3A1C04008F10A6 /* PhotographersViewController.swift */,
-				40DE3E8C1D4319E300541C58 /* PhotographerProfileSummaryViewController.swift */,
 				1E61A4941D3A399700253293 /* PhotographerProfileViewController.swift */,
 				403242171D47984600911186 /* AddPhotographer.swift */,
 			);
@@ -348,7 +345,6 @@
 				1EEA94B01D3F0C4E009DE2DA /* PhotoPackage.swift in Sources */,
 				4095A8ED1D3A1C04008F10A6 /* PhotographersViewController.swift in Sources */,
 				1EEA94B21D3F0C9D009DE2DA /* Customer.swift in Sources */,
-				40DE3E8D1D4319E300541C58 /* PhotographerProfileSummaryViewController.swift in Sources */,
 				403242181D47984600911186 /* AddPhotographer.swift in Sources */,
 				4095A8EB1D3A1C04008F10A6 /* AppDelegate.swift in Sources */,
 				1E61A4951D3A399700253293 /* PhotographerProfileViewController.swift in Sources */,
