@@ -32,8 +32,6 @@
 		4095A90B1D3A1C05008F10A6 /* PhotographUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4095A90A1D3A1C05008F10A6 /* PhotographUITests.swift */; };
 		40DE3E8D1D4319E300541C58 /* PhotographerProfileSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DE3E8C1D4319E300541C58 /* PhotographerProfileSummaryViewController.swift */; };
 		40DE3E8F1D43558800541C58 /* PhotographerSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DE3E8E1D43558800541C58 /* PhotographerSearchTests.swift */; };
-		8FE704721D4A413300D3FFEF /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FE704701D4A413300D3FFEF /* Profile.storyboard */; };
-		8FE704751D4A415B00D3FFEF /* Photographer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FE704731D4A415B00D3FFEF /* Photographer.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,8 +83,6 @@
 		4095A90C1D3A1C05008F10A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40DE3E8C1D4319E300541C58 /* PhotographerProfileSummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotographerProfileSummaryViewController.swift; sourceTree = "<group>"; };
 		40DE3E8E1D43558800541C58 /* PhotographerSearchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotographerSearchTests.swift; sourceTree = "<group>"; };
-		8FE704711D4A413300D3FFEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
-		8FE704741D4A415B00D3FFEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Photographer.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,8 +312,6 @@
 				4095A8F51D3A1C04008F10A6 /* LaunchScreen.storyboard in Resources */,
 				4095A8F21D3A1C04008F10A6 /* Assets.xcassets in Resources */,
 				4095A8F01D3A1C04008F10A6 /* Main.storyboard in Resources */,
-				8FE704721D4A413300D3FFEF /* Profile.storyboard in Resources */,
-				8FE704751D4A415B00D3FFEF /* Photographer.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,22 +426,6 @@
 				4095A8F41D3A1C04008F10A6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		8FE704701D4A413300D3FFEF /* Profile.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8FE704711D4A413300D3FFEF /* Base */,
-			);
-			name = Profile.storyboard;
-			sourceTree = "<group>";
-		};
-		8FE704731D4A415B00D3FFEF /* Photographer.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8FE704741D4A415B00D3FFEF /* Base */,
-			);
-			name = Photographer.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
