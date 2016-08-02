@@ -53,8 +53,20 @@ class PhotoServicesViewController: UIViewController {
                 let photoPackage:PhotoPackage = self.packagesAvailable[selectedIndex.row]
                 destVC.photoPackage = photoPackage
             }
-            
         }
+        
+        if (segue.identifier == "presentAddPackageViewController") {
+            let destinationVC: AddPackageViewController = segue.destinationViewController as! AddPackageViewController;
+            destinationVC.delegeate = self
+        }
+    }
+}
+
+extension PhotoServicesViewController: AddPackageDelegate {
+    func viewController(vc: AddPackageViewController, didAddPark: PhotoPackage!) {
+        self.packagesAvailable.append(didAddPark)
+        self.dismissViewControllerAnimated(true, completion: nil)
+        self.photoServicesUITableView.reloadData()
     }
 }
 
