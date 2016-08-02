@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Services-->
@@ -72,7 +73,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Services" id="Vya-aw-i5M"/>
+                    <navigationItem key="navigationItem" title="Services" id="Vya-aw-i5M">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="EIz-bA-NEu">
+                            <connections>
+                                <segue destination="avQ-j8-cFX" kind="presentation" id="nve-PE-oyV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="photoServicesUITableView" destination="Uqs-d6-WB5" id="QB2-b9-Etd"/>
                     </connections>
@@ -80,6 +87,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XEc-Mh-8Kv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="337" y="1788"/>
+        </scene>
+        <!--Add Package View Controller-->
+        <scene sceneID="Viw-qe-Zef">
+            <objects>
+                <viewController id="avQ-j8-cFX" customClass="AddPackageViewController" customModule="Photograph" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xw3-it-RNg"/>
+                        <viewControllerLayoutGuide type="bottom" id="7JI-zb-mCG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4WE-uV-CkG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h5z-CG-HLG">
+                                <rect key="frame" x="20" y="40" width="552" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Had-eb-akB">
+                                <rect key="frame" x="97" y="98" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelServiceCreation:" destination="avQ-j8-cFX" eventType="touchUpInside" id="9t0-hC-crw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3WI-PP-u7Y">
+                                <rect key="frame" x="36" y="98" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveService:" destination="avQ-j8-cFX" eventType="touchUpInside" id="xuj-zC-J2n"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="h5z-CG-HLG" firstAttribute="leading" secondItem="4WE-uV-CkG" secondAttribute="leadingMargin" id="AGS-Lc-L0e"/>
+                            <constraint firstItem="h5z-CG-HLG" firstAttribute="top" secondItem="Xw3-it-RNg" secondAttribute="bottom" constant="20" id="Ciy-nV-hzE"/>
+                            <constraint firstItem="h5z-CG-HLG" firstAttribute="top" secondItem="Xw3-it-RNg" secondAttribute="bottom" constant="20" id="Gzn-Df-fyU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="h5z-CG-HLG" secondAttribute="trailing" constant="8" id="gXs-rD-r2L"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Gzn-Df-fyU"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="Had-eb-akB" id="egj-2o-yjA"/>
+                        <outlet property="saveButton" destination="3WI-PP-u7Y" id="muL-fi-Zdc"/>
+                        <outlet property="serviceTextField" destination="h5z-CG-HLG" id="crO-jY-OhW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GKX-Mh-hfD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="334" y="2556"/>
         </scene>
         <!--Photo Package Details View Controller-->
         <scene sceneID="1Li-dy-1Ja">
