@@ -15,7 +15,8 @@ class AddPackageViewController: UIViewController {
     @IBOutlet weak var serviceTextField: UITextField!
     
     @IBAction func cancelServiceCreation(sender: UIButton) {
-        self.presentedViewController?.dismissViewControllerAnimated(true, completion: nil)
+        //self.presentedViewController?.dismissViewControllerAnimated(true, completion: nil)
+        dismissViewControllerAnimated(true, completion: nil)
     }
     @IBAction func saveService(sender: UIButton) {
     }
