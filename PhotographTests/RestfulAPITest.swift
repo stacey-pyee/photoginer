@@ -30,6 +30,11 @@ class RestfulAPITest: XCTestCase {
             let htmlString: String? = String(data: data!, encoding: NSUTF8StringEncoding)
             XCTAssert(htmlString != nil, "Should not be nil")
             
+            print("Data \(data)")
+            print("Response \(response)")
+            
+            // Convert to JSON
+            
             expectation.fulfill()
         }
         loadTask.resume()
