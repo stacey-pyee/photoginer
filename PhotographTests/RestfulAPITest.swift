@@ -20,7 +20,7 @@ class RestfulAPITest: XCTestCase {
         super.tearDown()
     }
     
-    func testLoadHomepage() {
+    func testLoadPhotographersFromBackendLess() {
         let expectation = self.expectationWithDescription("Load Task")
         
         
@@ -31,7 +31,7 @@ class RestfulAPITest: XCTestCase {
 //        let session = NSURLSession.sharedSession()
         let session = NSURLSession(configuration: sessionConfig)
         //let url = NSURL(string: "https://pokeapi.co/api/v2/pokemon")
-        let url = NSURL(string: "https://api.backendless.com/v1/data/Users")!
+        let url = NSURL(string: "https://api.backendless.com/v1/data/Photographer")!
         let loadTask: NSURLSessionDataTask = session.dataTaskWithURL(url) { (data:NSData?, response:NSURLResponse?, error:NSError?) -> Void in
             
             let htmlString: String? = String(data: data!, encoding: NSUTF8StringEncoding)
@@ -46,6 +46,9 @@ class RestfulAPITest: XCTestCase {
             } else {
                 XCTAssert(false, "It should be HTTP Response")
             }
+            
+            let responseInString: String? = String(data: data!, encoding: NSUTF8StringEncoding)
+            print(responseInString)
             
             // Convert to JSON
 //            let json: [String : AnyObject] = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions(rawValue: 0)) as! [String : AnyObject]
