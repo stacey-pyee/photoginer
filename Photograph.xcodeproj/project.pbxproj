@@ -30,6 +30,8 @@
 		4095A9001D3A1C05008F10A6 /* PhotographTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4095A8FF1D3A1C05008F10A6 /* PhotographTests.swift */; };
 		4095A90B1D3A1C05008F10A6 /* PhotographUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4095A90A1D3A1C05008F10A6 /* PhotographUITests.swift */; };
 		40DE3E8F1D43558800541C58 /* PhotographerSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DE3E8E1D43558800541C58 /* PhotographerSearchTests.swift */; };
+		8ADF30271D533FE3001D07BD /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF30261D533FE3001D07BD /* ProfileViewController.swift */; };
+		8ADF30291D533FF9001D07BD /* ProfileEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF30281D533FF9001D07BD /* ProfileEditViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		4095A90A1D3A1C05008F10A6 /* PhotographUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographUITests.swift; sourceTree = "<group>"; };
 		4095A90C1D3A1C05008F10A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40DE3E8E1D43558800541C58 /* PhotographerSearchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotographerSearchTests.swift; sourceTree = "<group>"; };
+		8ADF30261D533FE3001D07BD /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		8ADF30281D533FF9001D07BD /* ProfileEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileEditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,7 @@
 		1EEA94A91D3E58DA009DE2DA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8ADF30251D533FCA001D07BD /* Profile */,
 				407DC3591D4C9D0F00706E06 /* Photographer */,
 				1E8E7BAB1D48BB0D00757FD1 /* PhotoService */,
 			);
@@ -203,6 +208,15 @@
 				4095A90C1D3A1C05008F10A6 /* Info.plist */,
 			);
 			path = PhotographUITests;
+			sourceTree = "<group>";
+		};
+		8ADF30251D533FCA001D07BD /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				8ADF30261D533FE3001D07BD /* ProfileViewController.swift */,
+				8ADF30281D533FF9001D07BD /* ProfileEditViewController.swift */,
+			);
+			name = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,9 +354,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EEA94AE1D3F0BF9009DE2DA /* Photographer.swift in Sources */,
+				8ADF30291D533FF9001D07BD /* ProfileEditViewController.swift in Sources */,
 				1E8E7BA81D4780E900757FD1 /* PhotoServicesViewController.swift in Sources */,
 				1EEA94B61D3F0CE3009DE2DA /* PhotoServiceType.swift in Sources */,
 				1EEA94B01D3F0C4E009DE2DA /* PhotoPackage.swift in Sources */,
+				8ADF30271D533FE3001D07BD /* ProfileViewController.swift in Sources */,
 				4095A8ED1D3A1C04008F10A6 /* PhotographersViewController.swift in Sources */,
 				1EEA94B21D3F0C9D009DE2DA /* Customer.swift in Sources */,
 				403242181D47984600911186 /* AddPhotographer.swift in Sources */,
