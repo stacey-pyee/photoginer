@@ -13,6 +13,7 @@
 		1E8E7BAA1D47964800757FD1 /* PhotoPackageDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8E7BA91D47964800757FD1 /* PhotoPackageDetailsViewController.swift */; };
 		1EA8B9071D49D68E00311A06 /* PhotoPackageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA8B9061D49D68E00311A06 /* PhotoPackageTableViewCell.swift */; };
 		1EA8B90B1D4A266400311A06 /* AddPackageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA8B90A1D4A266400311A06 /* AddPackageViewController.swift */; };
+		1EC2FD061D50DD43009DD442 /* RestfulAPITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC2FD051D50DD43009DD442 /* RestfulAPITest.swift */; };
 		1EEA94AE1D3F0BF9009DE2DA /* Photographer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA94AD1D3F0BF9009DE2DA /* Photographer.swift */; };
 		1EEA94B01D3F0C4E009DE2DA /* PhotoPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA94AF1D3F0C4E009DE2DA /* PhotoPackage.swift */; };
 		1EEA94B21D3F0C9D009DE2DA /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA94B11D3F0C9D009DE2DA /* Customer.swift */; };
@@ -58,6 +59,7 @@
 		1E8E7BA91D47964800757FD1 /* PhotoPackageDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPackageDetailsViewController.swift; sourceTree = "<group>"; };
 		1EA8B9061D49D68E00311A06 /* PhotoPackageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPackageTableViewCell.swift; sourceTree = "<group>"; };
 		1EA8B90A1D4A266400311A06 /* AddPackageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPackageViewController.swift; sourceTree = "<group>"; };
+		1EC2FD051D50DD43009DD442 /* RestfulAPITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestfulAPITest.swift; sourceTree = "<group>"; };
 		1EEA94AD1D3F0BF9009DE2DA /* Photographer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photographer.swift; sourceTree = "<group>"; };
 		1EEA94AF1D3F0C4E009DE2DA /* PhotoPackage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPackage.swift; sourceTree = "<group>"; };
 		1EEA94B11D3F0C9D009DE2DA /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				4095A9011D3A1C05008F10A6 /* Info.plist */,
 				40DE3E8E1D43558800541C58 /* PhotographerSearchTests.swift */,
 				1E8E7BA51D477E9A00757FD1 /* PhotoPackageTests.swift */,
+				1EC2FD051D50DD43009DD442 /* RestfulAPITest.swift */,
 			);
 			path = PhotographTests;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 			files = (
 				1E8E7BA61D477E9A00757FD1 /* PhotoPackageTests.swift in Sources */,
 				40DE3E8F1D43558800541C58 /* PhotographerSearchTests.swift in Sources */,
+				1EC2FD061D50DD43009DD442 /* RestfulAPITest.swift in Sources */,
 				4095A9001D3A1C05008F10A6 /* PhotographTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
