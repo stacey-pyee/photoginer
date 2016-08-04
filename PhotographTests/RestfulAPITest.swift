@@ -23,9 +23,16 @@ class RestfulAPITest: XCTestCase {
     func testLoadHomepage() {
         let expectation = self.expectationWithDescription("Load Task")
         
-        let session = NSURLSession.sharedSession()
-        let url = NSURL(string: "https://pokeapi.co/api/v2/pokemon")
-        let loadTask: NSURLSessionDataTask = session.dataTaskWithURL(url!) { (data:NSData?, response:NSURLResponse?, error:NSError?) -> Void in
+        
+        let sessionConfig: NSURLSessionConfiguration = NSURLSessionConfiguration.defaultSessionConfiguration()
+        sessionConfig.HTTPAdditionalHeaders = ["application-id" : "CCEB2CD0-B42C-5FDC-FF45-CE0743545C00",
+                                               "secret-key" : "BF07B667-B159-BBFE-FF31-524775452900"]
+        
+//        let session = NSURLSession.sharedSession()
+        let session = NSURLSession(configuration: sessionConfig)
+        //let url = NSURL(string: "https://pokeapi.co/api/v2/pokemon")
+        let url = NSURL(string: "https://api.backendless.com/v1/data/Users")!
+        let loadTask: NSURLSessionDataTask = session.dataTaskWithURL(url) { (data:NSData?, response:NSURLResponse?, error:NSError?) -> Void in
             
             let htmlString: String? = String(data: data!, encoding: NSUTF8StringEncoding)
             XCTAssert(htmlString != nil, "Should not be nil")
@@ -33,13 +40,22 @@ class RestfulAPITest: XCTestCase {
             print("Data \(data)")
             print("Response \(response)")
             
-            // Convert to JSON
+            // Check for response status code
+            if let httpResponse: NSHTTPURLResponse = response as? NSHTTPURLResponse {
+                XCTAssert(httpResponse.statusCode == 200, "We should get 200 but \(httpResponse.statusCode)")
+            } else {
+                XCTAssert(false, "It should be HTTP Response")
+            }
             
+            // Convert to JSON
+//            let json: [String : AnyObject] = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions(rawValue: 0)) as! [String : AnyObject]
+//            
+//            print(json.keys)
             expectation.fulfill()
         }
         loadTask.resume()
         
-        self.waitForExpectationsWithTimeout(10, handler: nil)
+        self.waitForExpectationsWithTimeout(100, handler: nil)
     }
 
     func testExample() {
