@@ -51,9 +51,16 @@ class RestfulAPITest: XCTestCase {
             print(responseInString)
             
             // Convert to JSON
-//            let json: [String : AnyObject] = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions(rawValue: 0)) as! [String : AnyObject]
-//            
-//            print(json.keys)
+            let json: [String : AnyObject] = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions(rawValue: 0)) as! [String : AnyObject]
+            
+            let dataArray: [[String : AnyObject]] = (json["data"] as? [[String : AnyObject]])!
+            print("Response \(dataArray)")
+            
+            for photographerJSON in dataArray {
+                let name: String = photographerJSON["name"] as! String
+                print(name)
+            }
+            
             expectation.fulfill()
         }
         loadTask.resume()
