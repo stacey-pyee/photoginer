@@ -24,8 +24,12 @@ class RestfulAPITest: XCTestCase {
         let expectation = self.expectationWithDescription("Load Task")
         
         let session = NSURLSession.sharedSession()
-        let url = NSURL(fileURLWithPath: "https://pokeapi.co/")
-        let loadTask: NSURLSessionDataTask = session.dataTaskWithURL(url) { (data:NSData?, response:NSURLResponse?, error:NSError?) -> Void in
+        let url = NSURL(string: "https://pokeapi.co/api/v2/pokemon")
+        let loadTask: NSURLSessionDataTask = session.dataTaskWithURL(url!) { (data:NSData?, response:NSURLResponse?, error:NSError?) -> Void in
+            
+            let htmlString: String? = String(data: data!, encoding: NSUTF8StringEncoding)
+            XCTAssert(htmlString != nil, "Should not be nil")
+            
             expectation.fulfill()
         }
         loadTask.resume()
