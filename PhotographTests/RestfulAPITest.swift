@@ -7,12 +7,18 @@
 //
 
 import XCTest
+@testable import Photograph
 
 class RestfulAPITest: XCTestCase {
+    var session: NSURLSession!
 
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        let sessionConfig: NSURLSessionConfiguration = NSURLSessionConfiguration.defaultSessionConfiguration()
+        sessionConfig.HTTPAdditionalHeaders = ["application-id" : "CCEB2CD0-B42C-5FDC-FF45-CE0743545C00",
+                                               "secret-key" : "BF07B667-B159-BBFE-FF31-524775452900"]
+        session = NSURLSession(configuration: sessionConfig)
     }
     
     override func tearDown() {
@@ -22,17 +28,10 @@ class RestfulAPITest: XCTestCase {
     
     func testLoadPhotographersFromBackendLess() {
         let expectation = self.expectationWithDescription("Load Task")
-        
-        
-        let sessionConfig: NSURLSessionConfiguration = NSURLSessionConfiguration.defaultSessionConfiguration()
-        sessionConfig.HTTPAdditionalHeaders = ["application-id" : "CCEB2CD0-B42C-5FDC-FF45-CE0743545C00",
-                                               "secret-key" : "BF07B667-B159-BBFE-FF31-524775452900"]
-        
 //        let session = NSURLSession.sharedSession()
-        let session = NSURLSession(configuration: sessionConfig)
         //let url = NSURL(string: "https://pokeapi.co/api/v2/pokemon")
         let url = NSURL(string: "https://api.backendless.com/v1/data/Photographer")!
-        let loadTask: NSURLSessionDataTask = session.dataTaskWithURL(url) { (data:NSData?, response:NSURLResponse?, error:NSError?) -> Void in
+        let loadTask: NSURLSessionDataTask = self.session.dataTaskWithURL(url) { (data:NSData?, response:NSURLResponse?, error:NSError?) -> Void in
             
             let htmlString: String? = String(data: data!, encoding: NSUTF8StringEncoding)
             XCTAssert(htmlString != nil, "Should not be nil")
@@ -65,6 +64,43 @@ class RestfulAPITest: XCTestCase {
         }
         loadTask.resume()
         
+        self.waitForExpectationsWithTimeout(100, handler: nil)
+    }
+    
+    func testCreatingObjectToAPI() {
+        let expectation = self.expectationWithDescription("Create Photographer")
+        
+        let url: NSURL = NSURL(string: "https://api.backendless.com/v1/data/Photographer")!
+        let urlRequest: NSMutableURLRequest = NSMutableURLRequest(URL: url)
+        urlRequest.HTTPMethod = "POST"
+        
+        // Create Photographer object
+        let photographer: Photographer = Photographer(name: "Magdalene", contact: "018-98765432", yearOfExperience: 2)
+        // Change it as a JSONObject
+        let jsonDictionary: [String : AnyObject] = [
+            "name" : photographer.name,
+            "contact" : photographer.contact
+        ]
+        
+        let jsonData: NSData = try! NSJSONSerialization.dataWithJSONObject(jsonDictionary, options: NSJSONWritingOptions(rawValue: 0))
+        urlRequest.HTTPBody = jsonData
+        
+//        user-token: value-of-the-user-token-header-from-login // to set ownerId value
+//        Content-Type:application/json
+//        application-type: REST
+        urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.addValue("REST", forHTTPHeaderField: "application-type")
+        
+        let postTask: NSURLSessionDataTask = self.session.dataTaskWithRequest(urlRequest) { (data: NSData?, response: NSURLResponse?, error:NSError?) in
+            
+            // check for status code
+            
+            let responseInString: String? = String(data: data!, encoding: NSUTF8StringEncoding)
+            print(responseInString)
+            expectation.fulfill()
+        }
+        
+        postTask.resume()
         self.waitForExpectationsWithTimeout(100, handler: nil)
     }
 
