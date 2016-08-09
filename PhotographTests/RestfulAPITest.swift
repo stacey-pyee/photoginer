@@ -84,19 +84,15 @@ class RestfulAPITest: XCTestCase {
         
         let jsonData: NSData = try! NSJSONSerialization.dataWithJSONObject(jsonDictionary, options: NSJSONWritingOptions(rawValue: 0))
         urlRequest.HTTPBody = jsonData
-        
-//        user-token: value-of-the-user-token-header-from-login // to set ownerId value
-//        Content-Type:application/json
-//        application-type: REST
         urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
         urlRequest.addValue("REST", forHTTPHeaderField: "application-type")
         
         let postTask: NSURLSessionDataTask = self.session.dataTaskWithRequest(urlRequest) { (data: NSData?, response: NSURLResponse?, error:NSError?) in
             
-            // check for status code
-            
             let responseInString: String? = String(data: data!, encoding: NSUTF8StringEncoding)
-            print(responseInString)
+            NSLog("\(responseInString)")
+            
+            
             expectation.fulfill()
         }
         
