@@ -17,7 +17,8 @@ class PhotoServicesViewController: UIViewController {
         super.viewDidLoad()
         self.photoServicesUITableView.dataSource = self
         self.photoServicesUITableView.delegate = self
-        createDummyData()
+        //createDummyData()
+        self.refreshPackages()
     }
     
     func createDummyData() {
@@ -60,6 +61,18 @@ class PhotoServicesViewController: UIViewController {
             destinationVC.delegeate = self
         }
     }
+    
+    func refreshPackages() {
+        PhotoPackageLoader.sharedLoader.readPackagesFromServer { (packages, error) in
+            if let error = error {
+                print(error)
+            } else {
+                self.packagesAvailable = packages
+                self.photoServicesUITableView.reloadData()
+            }
+        }
+    }
+        
 }
 
 extension PhotoServicesViewController: AddPackageDelegate {

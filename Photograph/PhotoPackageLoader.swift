@@ -50,6 +50,40 @@ class PhotoPackageLoader {
         
         postTask.resume()
     }
+    
+    func readPackagesFromServer(completionBlock: ((packages: [PhotoPackage], error: NSError?) -> Void)?) {
+        let url = NSURL(string: "https://api.backendless.com/v1/data/PhotoPackages")!
+        let loadTask: NSURLSessionDataTask = self.session.dataTaskWithURL(url) { (data:NSData?, response:NSURLResponse?, error:NSError?) -> Void in
+            
+            let responseInString: String? = String(data: data!, encoding: NSUTF8StringEncoding)
+            print(responseInString)
+            
+            // Convert to JSON
+            var json: [String : AnyObject]
+            do {
+                json = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions(rawValue: 0)) as! [String : AnyObject]
+            } catch let jsonError {
+                // Completion block with error
+                completionBlock? (packages: [], error: jsonError as NSError)
+                return
+            }
+            
+            let dataArray: [[String : AnyObject]] = (json["data"] as? [[String : AnyObject]])!
+            print("Response \(dataArray)")
+            
+            var packagesFromServer: [PhotoPackage] = []
+            for packageJSON in dataArray {
+                let package: PhotoPackage = PhotoPackage(jsonDictionary: packageJSON)!
+                packagesFromServer.append(package)
+            }
+            
+            dispatch_async(dispatch_get_main_queue(), {() -> Void in
+               completionBlock? (packages: packagesFromServer, error: nil)
+            })
+        }
+        loadTask.resume()
+    }
+
 
     
 }
