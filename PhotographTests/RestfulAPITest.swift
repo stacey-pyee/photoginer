@@ -84,25 +84,98 @@ class RestfulAPITest: XCTestCase {
         
         let jsonData: NSData = try! NSJSONSerialization.dataWithJSONObject(jsonDictionary, options: NSJSONWritingOptions(rawValue: 0))
         urlRequest.HTTPBody = jsonData
-        
-//        user-token: value-of-the-user-token-header-from-login // to set ownerId value
-//        Content-Type:application/json
-//        application-type: REST
         urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
         urlRequest.addValue("REST", forHTTPHeaderField: "application-type")
         
         let postTask: NSURLSessionDataTask = self.session.dataTaskWithRequest(urlRequest) { (data: NSData?, response: NSURLResponse?, error:NSError?) in
             
-            // check for status code
-            
             let responseInString: String? = String(data: data!, encoding: NSUTF8StringEncoding)
-            print(responseInString)
+            NSLog("\(responseInString)")
+            
+            
             expectation.fulfill()
         }
         
         postTask.resume()
         self.waitForExpectationsWithTimeout(100, handler: nil)
     }
+    
+    func testCreatingPackageToAPI() {
+        let expectation = self.expectationWithDescription("Create Package")
+        
+        let url: NSURL = NSURL(string: "https://api.backendless.com/v1/data/PhotoPackages")!
+        let urlRequest: NSMutableURLRequest = NSMutableURLRequest(URL: url)
+        urlRequest.HTTPMethod = "POST"
+        
+        // Create PhotoPackage object
+        let photographer: Photographer = Photographer(name: "Magdalene", contact: "018-98765432", yearOfExperience: 2)
+        let package: PhotoPackage = PhotoPackage(name: "Holiday", price: 130.00, photographer: photographer, photoServiceType: PhotoServiceType.Candid)
+        // Change it as a JSONObject
+        let jsonDictionary: [String : AnyObject] = [
+            "name" : package.name,
+            "price" : package.price
+        ]
+        
+        let jsonData: NSData = try! NSJSONSerialization.dataWithJSONObject(jsonDictionary, options: NSJSONWritingOptions(rawValue: 0))
+        urlRequest.HTTPBody = jsonData
+        urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.addValue("REST", forHTTPHeaderField: "application-type")
+        
+        let postTask: NSURLSessionDataTask = self.session.dataTaskWithRequest(urlRequest) { (data: NSData?, response: NSURLResponse?, error:NSError?) in
+            
+            let responseInString: String? = String(data: data!, encoding: NSUTF8StringEncoding)
+            NSLog("\(responseInString)")
+            
+            
+            expectation.fulfill()
+        }
+        
+        postTask.resume()
+        self.waitForExpectationsWithTimeout(100, handler: nil)
+    }
+    
+    func testLoadPackagesFromBackendLess() {
+        let expectation = self.expectationWithDescription("Load Packages")
+        //        let session = NSURLSession.sharedSession()
+        //let url = NSURL(string: "https://pokeapi.co/api/v2/pokemon")
+        let url = NSURL(string: "https://api.backendless.com/v1/data/PhotoPackages")!
+        let loadTask: NSURLSessionDataTask = self.session.dataTaskWithURL(url) { (data:NSData?, response:NSURLResponse?, error:NSError?) -> Void in
+            
+            let htmlString: String? = String(data: data!, encoding: NSUTF8StringEncoding)
+            XCTAssert(htmlString != nil, "Should not be nil")
+            
+            print("Data \(data)")
+            print("Response \(response)")
+            
+            // Check for response status code
+            if let httpResponse: NSHTTPURLResponse = response as? NSHTTPURLResponse {
+                XCTAssert(httpResponse.statusCode == 200, "We should get 200 but \(httpResponse.statusCode)")
+            } else {
+                XCTAssert(false, "It should be HTTP Response")
+            }
+            
+            let responseInString: String? = String(data: data!, encoding: NSUTF8StringEncoding)
+            print(responseInString)
+            
+            // Convert to JSON
+            let json: [String : AnyObject] = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions(rawValue: 0)) as! [String : AnyObject]
+            
+            let dataArray: [[String : AnyObject]] = (json["data"] as? [[String : AnyObject]])!
+            print("Response \(dataArray)")
+            
+            for packageJSON in dataArray {
+                let name: String = packageJSON["name"] as! String
+                print(name)
+            }
+            
+            expectation.fulfill()
+        }
+        loadTask.resume()
+        
+        self.waitForExpectationsWithTimeout(100, handler: nil)
+    }
+
+
 
     func testExample() {
         // This is an example of a functional test case.
