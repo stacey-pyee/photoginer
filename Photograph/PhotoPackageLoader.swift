@@ -12,6 +12,7 @@ class PhotoPackageLoader {
     // Singleton pattern
     static let sharedLoader: PhotoPackageLoader = PhotoPackageLoader()
     private init() {
+        baseURL = NSURL(string: "https://api.backendless.com/v1/data/")!
         let sessionConfig: NSURLSessionConfiguration = NSURLSessionConfiguration.defaultSessionConfiguration()
         sessionConfig.HTTPAdditionalHeaders = ["application-id" : "CCEB2CD0-B42C-5FDC-FF45-CE0743545C00",
                                                "secret-key" : "BF07B667-B159-BBFE-FF31-524775452900"]
@@ -20,11 +21,12 @@ class PhotoPackageLoader {
     }
     
     let session: NSURLSession
+    let baseURL: NSURL
     
     // Network
     func creatingPackageOnServer(photoPackage: PhotoPackage, completionBlock: ((success: Bool , error: NSError?) -> Void)?) {
         
-        let url: NSURL = NSURL(string: "https://api.backendless.com/v1/data/PhotoPackages")!
+        let url: NSURL = NSURL(string: "PhotoPackages", relativeToURL: self.baseURL)!
         let urlRequest: NSMutableURLRequest = NSMutableURLRequest(URL: url)
         urlRequest.HTTPMethod = "POST"
         
@@ -72,7 +74,7 @@ class PhotoPackageLoader {
     }
     
     func readPackagesFromServer(completionBlock: ((packages: [PhotoPackage], error: NSError?) -> Void)?) {
-        let url = NSURL(string: "https://api.backendless.com/v1/data/PhotoPackages")!
+        let url = NSURL(string: "PhotoPackages", relativeToURL: self.baseURL)!
         let loadTask: NSURLSessionDataTask = self.session.dataTaskWithURL(url) { (data:NSData?, response:NSURLResponse?, error:NSError?) -> Void in
             
             let responseInString: String? = String(data: data!, encoding: NSUTF8StringEncoding)
