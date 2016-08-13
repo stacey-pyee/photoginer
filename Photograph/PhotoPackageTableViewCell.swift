@@ -13,6 +13,7 @@ class PhotoPackageTableViewCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var cancel: UIButton!
     
     var photoPackage: PhotoPackage! {
         didSet {

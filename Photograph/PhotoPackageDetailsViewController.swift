@@ -12,8 +12,18 @@ import UIKit
 class PhotoPackageDetailsViewController: UIViewController {
     var photoPackage: PhotoPackage!
     
+    @IBOutlet weak var packageDetailsView: UIImageView!
+    @IBOutlet weak var cancel: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(photoPackage.name)
+    }
+    
+    override func didReceiveMemoryWarning() {
+       super.didReceiveMemoryWarning()
+    }
+    
+    @IBAction func cancel(sender: UIButton) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
 }
