@@ -1,5 +1,5 @@
 //
-//  PhotoServicesViewController.swift
+//  PhotoPackagesViewController.swift
 //  Photograph
 //
 //  Created by Pyee on 26/07/2016.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhotoServicesViewController: UIViewController {
+class PhotoPackagesViewController: UIViewController {
 
     @IBOutlet weak var photoServicesUITableView: UITableView!
     var refreshControl: UIRefreshControl!
@@ -22,7 +22,7 @@ class PhotoServicesViewController: UIViewController {
         
         // Add in a refreshControl
         self.refreshControl = UIRefreshControl()
-        self.refreshControl.addTarget(self, action: #selector(PhotoServicesViewController.refreshPackages), forControlEvents: UIControlEvents.ValueChanged)
+        self.refreshControl.addTarget(self, action: #selector(PhotoPackagesViewController.refreshPackages), forControlEvents: UIControlEvents.ValueChanged)
         self.photoServicesUITableView.addSubview(self.refreshControl)
         
         // load data
@@ -89,7 +89,7 @@ class PhotoServicesViewController: UIViewController {
         
 }
 
-extension PhotoServicesViewController: AddPackageDelegate {
+extension PhotoPackagesViewController: AddPackageDelegate {
     func viewController(vc: AddPackageViewController, didAddPark: PhotoPackage!) {
         self.packagesAvailable.append(didAddPark)
         self.dismissViewControllerAnimated(true, completion: nil)
@@ -103,14 +103,14 @@ extension PhotoServicesViewController: AddPackageDelegate {
     }
 }
 
-extension PhotoServicesViewController: UITableViewDelegate {
+extension PhotoPackagesViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 //        let photoPackageViewController: PhotoPackageDetailsViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PhotoPackageDetailsViewController") as! PhotoPackageDetailsViewController
 //        self.navigationController?.pushViewController(photoPackageViewController, animated: true)
     }
 }
 
-extension PhotoServicesViewController: UITableViewDataSource {
+extension PhotoPackagesViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return packagesAvailable.count
     }
