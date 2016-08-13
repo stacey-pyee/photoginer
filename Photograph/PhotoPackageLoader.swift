@@ -22,7 +22,7 @@ class PhotoPackageLoader {
     let session: NSURLSession
     
     // Network
-    func creatingPackageOnServer() {
+    func creatingPackageOnServer(completionBlock: ((success: Bool , error: NSError?) -> Void)?) {
         
         let url: NSURL = NSURL(string: "https://api.backendless.com/v1/data/PhotoPackages")!
         let urlRequest: NSMutableURLRequest = NSMutableURLRequest(URL: url)
@@ -44,8 +44,28 @@ class PhotoPackageLoader {
         
         let postTask: NSURLSessionDataTask = self.session.dataTaskWithRequest(urlRequest) { (data: NSData?, response: NSURLResponse?, error:NSError?) in
             
-            let responseInString: String? = String(data: data!, encoding: NSUTF8StringEncoding)
-            NSLog("\(responseInString)")
+            if (error != nil) {
+                completionBlock? (success: false, error: error)
+                return;
+            }
+            
+            // Convert to jsonObject
+            var jsonObj: [String : AnyObject]
+            do {
+                jsonObj = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions(rawValue: 0)) as! [String : AnyObject]
+                
+                // check and see if objectId is returned
+                if (jsonObj["objectId"] != nil) {
+                    completionBlock? (success: true, error: nil)
+                } else {
+                    completionBlock? (success: true, error: nil)
+                }
+                
+            } catch let error {
+                // Error
+                completionBlock? (success: false, error: error as NSError)
+            }
+            
         }
         
         postTask.resume()
@@ -58,17 +78,17 @@ class PhotoPackageLoader {
             let responseInString: String? = String(data: data!, encoding: NSUTF8StringEncoding)
             print(responseInString)
             
-            // Convert to JSON
-            var json: [String : AnyObject]
+            // Convert to JSONObject
+            var jsonObj: [String : AnyObject]
             do {
-                json = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions(rawValue: 0)) as! [String : AnyObject]
+                jsonObj = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions(rawValue: 0)) as! [String : AnyObject]
             } catch let jsonError {
                 // Completion block with error
                 completionBlock? (packages: [], error: jsonError as NSError)
                 return
             }
             
-            let dataArray: [[String : AnyObject]] = (json["data"] as? [[String : AnyObject]])!
+            let dataArray: [[String : AnyObject]] = (jsonObj["data"] as? [[String : AnyObject]])!
             print("Response \(dataArray)")
             
             var packagesFromServer: [PhotoPackage] = []

@@ -30,7 +30,5 @@ class AddPackageViewController: UIViewController {
         self.package = PhotoPackage.init(name: self.serviceTextField.text!, price: 100.0, photographer: david, photoServiceType: PhotoServiceType.Event)
         
         self.delegeate?.viewController(self, didAddPark: self.package)
-        
-        PhotoPackageLoader.sharedLoader.creatingPackageOnServer()
     }
 }
