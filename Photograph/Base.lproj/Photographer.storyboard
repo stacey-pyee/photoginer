@@ -6,7 +6,20 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Photographers-->
+        <!--Navigation Controller-->
+        <scene sceneID="fzS-ud-ASl">
+            <objects>
+                <navigationController id="rsY-6V-Foc" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qKc-Gu-l0P">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zm6-D3-pHf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2508" y="2657"/>
+        </scene>
+        <!--Title-->
         <scene sceneID="poO-xs-dZc">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="nZq-gO-mXG" customClass="PhotographersViewController" customModule="Photograph" customModuleProvider="target" sceneMemberID="viewController">
@@ -57,13 +70,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Photographers" image="photographer-icon" id="rKG-Hc-Nua"/>
-                    <navigationItem key="navigationItem" id="WO4-vX-mSl">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="4og-JU-5ZM">
-                            <connections>
-                                <segue destination="qkX-WR-yLY" kind="presentation" id="ivf-zJ-yhs"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Title" id="azS-UQ-zrM"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="photographerSearchBar" destination="izQ-Th-nWF" id="caw-te-hem"/>
@@ -149,7 +156,7 @@
                             <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9MH-yq-yDX">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="Bdp-qW-NGp"/>
+                                    <navigationItem title="Photographer Profile" id="Bdp-qW-NGp"/>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="el1-om-olX">
