@@ -1,5 +1,5 @@
 //
-//  PhotoServicesViewController.swift
+//  PhotoPackagesViewController.swift
 //  Photograph
 //
 //  Created by Pyee on 26/07/2016.
@@ -8,9 +8,10 @@
 
 import UIKit
 
-class PhotoServicesViewController: UIViewController {
+class PhotoPackagesViewController: UIViewController {
 
     @IBOutlet weak var photoServicesUITableView: UITableView!
+    var refreshControl: UIRefreshControl!
     var packagesAvailable: [PhotoPackage] = []
     
     override func viewDidLoad() {
@@ -18,6 +19,13 @@ class PhotoServicesViewController: UIViewController {
         self.photoServicesUITableView.dataSource = self
         self.photoServicesUITableView.delegate = self
         //createDummyData()
+        
+        // Add in a refreshControl
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.addTarget(self, action: #selector(PhotoPackagesViewController.refreshPackages), forControlEvents: UIControlEvents.ValueChanged)
+        self.photoServicesUITableView.addSubview(self.refreshControl)
+        
+        // load data
         self.refreshPackages()
     }
     
@@ -63,7 +71,13 @@ class PhotoServicesViewController: UIViewController {
     }
     
     func refreshPackages() {
+        if let refreshControl = self.refreshControl {
+            refreshControl.beginRefreshing()
+        }
+
         PhotoPackageLoader.sharedLoader.readPackagesFromServer { (packages, error) in
+            // end refreshing when comes back from completion block
+            self.refreshControl.endRefreshing()
             if let error = error {
                 print(error)
             } else {
@@ -75,26 +89,28 @@ class PhotoServicesViewController: UIViewController {
         
 }
 
-extension PhotoServicesViewController: AddPackageDelegate {
+extension PhotoPackagesViewController: AddPackageDelegate {
     func viewController(vc: AddPackageViewController, didAddPark: PhotoPackage!) {
         self.packagesAvailable.append(didAddPark)
         self.dismissViewControllerAnimated(true, completion: nil)
         self.photoServicesUITableView.reloadData()
-        
-        PhotoPackageLoader.sharedLoader.creatingPackageOnServer { (success, error) in
+
+        // Save to server
+        PhotoPackageLoader.sharedLoader.creatingPackageOnServer(didAddPark) { (success, error) in
+            // Thing to do when response comes back
             print(success)
         }
     }
 }
 
-extension PhotoServicesViewController: UITableViewDelegate {
+extension PhotoPackagesViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 //        let photoPackageViewController: PhotoPackageDetailsViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PhotoPackageDetailsViewController") as! PhotoPackageDetailsViewController
 //        self.navigationController?.pushViewController(photoPackageViewController, animated: true)
     }
 }
 
-extension PhotoServicesViewController: UITableViewDataSource {
+extension PhotoPackagesViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return packagesAvailable.count
     }

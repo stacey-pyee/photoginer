@@ -22,5 +22,6 @@ class PhotoPackageTableViewCell: UITableViewCell {
 
     func updateCellDisplay() {
         self.nameLabel.text = photoPackage.name
+        self.priceLabel.text = "RM \(photoPackage.price)"
     }
 }
