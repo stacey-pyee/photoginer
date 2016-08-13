@@ -80,6 +80,10 @@ extension PhotoServicesViewController: AddPackageDelegate {
         self.packagesAvailable.append(didAddPark)
         self.dismissViewControllerAnimated(true, completion: nil)
         self.photoServicesUITableView.reloadData()
+        
+        PhotoPackageLoader.sharedLoader.creatingPackageOnServer { (success, error) in
+            print(success)
+        }
     }
 }
 
