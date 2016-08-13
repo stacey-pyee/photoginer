@@ -30,9 +30,6 @@ class PhotoPackageLoader {
         let urlRequest: NSMutableURLRequest = NSMutableURLRequest(URL: url)
         urlRequest.HTTPMethod = "POST"
         
-        // Create PhotoPackage object
-//        let photographer: Photographer = Photographer(name: "Magdalene", contact: "018-98765432", yearOfExperience: 2)
-//        let package: PhotoPackage = PhotoPackage(name: "Holiday", price: 130.00, photographer: photographer, photoServiceType: PhotoServiceType.Candid)
         // Change it as a JSONObject
         let jsonDictionary: [String : AnyObject] = [
             "name" : photoPackage.name,
@@ -76,6 +73,11 @@ class PhotoPackageLoader {
     func readPackagesFromServer(completionBlock: ((packages: [PhotoPackage], error: NSError?) -> Void)?) {
         let url = NSURL(string: "PhotoPackages", relativeToURL: self.baseURL)!
         let loadTask: NSURLSessionDataTask = self.session.dataTaskWithURL(url) { (data:NSData?, response:NSURLResponse?, error:NSError?) -> Void in
+            
+            if (error != nil) {
+                completionBlock? (packages: [], error: error)
+                return
+            }
             
             let responseInString: String? = String(data: data!, encoding: NSUTF8StringEncoding)
             print(responseInString)
