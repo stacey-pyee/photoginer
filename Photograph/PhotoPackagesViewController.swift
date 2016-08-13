@@ -98,7 +98,11 @@ extension PhotoPackagesViewController: AddPackageDelegate {
         // Save to server
         PhotoPackageLoader.sharedLoader.creatingPackageOnServer(didAddPark) { (success, error) in
             // Thing to do when response comes back
-            print(success)
+            if (error != nil) {
+                self.showAlert("Upload Error", message: error!.localizedDescription, okTitle: "OK")
+            } else if (!success) {
+                self.showAlert("Upload Error", message: "Failed to create as new object", okTitle: "OK")
+            }
         }
     }
 }
