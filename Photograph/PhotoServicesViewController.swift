@@ -11,6 +11,7 @@ import UIKit
 class PhotoServicesViewController: UIViewController {
 
     @IBOutlet weak var photoServicesUITableView: UITableView!
+    var refreshControl: UIRefreshControl!
     var packagesAvailable: [PhotoPackage] = []
     
     override func viewDidLoad() {
@@ -18,6 +19,13 @@ class PhotoServicesViewController: UIViewController {
         self.photoServicesUITableView.dataSource = self
         self.photoServicesUITableView.delegate = self
         //createDummyData()
+        
+        // Add in a refreshControl
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.addTarget(self, action: #selector(PhotoServicesViewController.refreshPackages), forControlEvents: UIControlEvents.ValueChanged)
+        self.photoServicesUITableView.addSubview(self.refreshControl)
+        
+        // load data
         self.refreshPackages()
     }
     
@@ -63,7 +71,13 @@ class PhotoServicesViewController: UIViewController {
     }
     
     func refreshPackages() {
+        if let refreshControl = self.refreshControl {
+            refreshControl.beginRefreshing()
+        }
+
         PhotoPackageLoader.sharedLoader.readPackagesFromServer { (packages, error) in
+            // end refreshing when comes back from completion block
+            self.refreshControl.endRefreshing()
             if let error = error {
                 print(error)
             } else {
