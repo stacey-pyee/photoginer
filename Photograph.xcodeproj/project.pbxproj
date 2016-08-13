@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1E4F2F9B1D5A0DDD00B00982 /* PhotoPackageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4F2F9A1D5A0DDD00B00982 /* PhotoPackageLoader.swift */; };
+		1E5D1CA21D5EDFDD002896B6 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5D1CA11D5EDFDD002896B6 /* UIViewController+Alert.swift */; };
 		1E61A4951D3A399700253293 /* PhotographerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E61A4941D3A399700253293 /* PhotographerProfileViewController.swift */; };
 		1E8E7BA61D477E9A00757FD1 /* PhotoPackageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8E7BA51D477E9A00757FD1 /* PhotoPackageTests.swift */; };
 		1E8E7BA81D4780E900757FD1 /* PhotoPackagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8E7BA71D4780E900757FD1 /* PhotoPackagesViewController.swift */; };
@@ -55,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		1E4F2F9A1D5A0DDD00B00982 /* PhotoPackageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPackageLoader.swift; sourceTree = "<group>"; };
+		1E5D1CA11D5EDFDD002896B6 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		1E61A4941D3A399700253293 /* PhotographerProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotographerProfileViewController.swift; sourceTree = "<group>"; };
 		1E8E7BA51D477E9A00757FD1 /* PhotoPackageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPackageTests.swift; sourceTree = "<group>"; };
 		1E8E7BA71D4780E900757FD1 /* PhotoPackagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPackagesViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +122,14 @@
 				1E4F2F9A1D5A0DDD00B00982 /* PhotoPackageLoader.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		1E5D1CA01D5EDFB6002896B6 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1E5D1CA11D5EDFDD002896B6 /* UIViewController+Alert.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		1E8E7BAB1D48BB0D00757FD1 /* PhotoService */ = {
@@ -188,6 +198,7 @@
 		4095A8E91D3A1C04008F10A6 /* Photograph */ = {
 			isa = PBXGroup;
 			children = (
+				1E5D1CA01D5EDFB6002896B6 /* Utilities */,
 				1E4F2F991D59FB8A00B00982 /* Controller */,
 				4095A8EA1D3A1C04008F10A6 /* AppDelegate.swift */,
 				4095A8EE1D3A1C04008F10A6 /* Main.storyboard */,
@@ -370,6 +381,7 @@
 				1E4F2F9B1D5A0DDD00B00982 /* PhotoPackageLoader.swift in Sources */,
 				1EEA94AE1D3F0BF9009DE2DA /* Photographer.swift in Sources */,
 				8ADF302E1D53467C001D07BD /* ProfileEditViewController.swift in Sources */,
+				1E5D1CA21D5EDFDD002896B6 /* UIViewController+Alert.swift in Sources */,
 				1E8E7BA81D4780E900757FD1 /* PhotoPackagesViewController.swift in Sources */,
 				1EEA94B61D3F0CE3009DE2DA /* PhotoServiceType.swift in Sources */,
 				1EEA94B01D3F0C4E009DE2DA /* PhotoPackage.swift in Sources */,
