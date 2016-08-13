@@ -79,7 +79,7 @@ class PhotoPackagesViewController: UIViewController {
             // end refreshing when comes back from completion block
             self.refreshControl.endRefreshing()
             if let error = error {
-                print(error)
+                self.showAlert("Error", message: error.localizedDescription, okTitle: "OK")
             } else {
                 self.packagesAvailable = packages
                 self.photoServicesUITableView.reloadData()
