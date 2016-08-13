@@ -60,15 +60,19 @@
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ulg-g7-Oae">
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ulg-g7-Oae">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="izQ-Th-nWF" firstAttribute="top" secondItem="aZN-mu-xi3" secondAttribute="bottom" id="DHk-hF-Yfu"/>
+                            <constraint firstAttribute="trailing" secondItem="izQ-Th-nWF" secondAttribute="trailing" id="HoI-7r-0oI"/>
                             <constraint firstItem="5T0-MF-x4d" firstAttribute="top" secondItem="izQ-Th-nWF" secondAttribute="bottom" id="ROS-dT-zFd"/>
                             <constraint firstItem="5T0-MF-x4d" firstAttribute="leading" secondItem="8tE-yH-hTi" secondAttribute="leadingMargin" constant="-20" id="RdS-Od-6JY"/>
+                            <constraint firstItem="5T0-MF-x4d" firstAttribute="top" secondItem="izQ-Th-nWF" secondAttribute="bottom" id="RvY-xH-1Ac"/>
+                            <constraint firstItem="izQ-Th-nWF" firstAttribute="top" secondItem="ulg-g7-Oae" secondAttribute="bottom" id="k3o-VF-2Aa"/>
+                            <constraint firstItem="izQ-Th-nWF" firstAttribute="leading" secondItem="8tE-yH-hTi" secondAttribute="leading" id="mMm-rF-OWB"/>
                             <constraint firstItem="izQ-Th-nWF" firstAttribute="leading" secondItem="8tE-yH-hTi" secondAttribute="leadingMargin" constant="-20" id="wIy-VX-hWl"/>
                         </constraints>
                     </view>
