@@ -57,7 +57,7 @@ class PhotoPackageLoader {
                 if (jsonObj["objectId"] != nil) {
                     completionBlock? (success: true, error: nil)
                 } else {
-                    completionBlock? (success: true, error: nil)
+                    completionBlock? (success: false, error: nil)
                 }
                 
             } catch let error {
