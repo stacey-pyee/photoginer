@@ -22,19 +22,19 @@ class PhotoPackageLoader {
     let session: NSURLSession
     
     // Network
-    func creatingPackageOnServer(completionBlock: ((success: Bool , error: NSError?) -> Void)?) {
+    func creatingPackageOnServer(photoPackage: PhotoPackage, completionBlock: ((success: Bool , error: NSError?) -> Void)?) {
         
         let url: NSURL = NSURL(string: "https://api.backendless.com/v1/data/PhotoPackages")!
         let urlRequest: NSMutableURLRequest = NSMutableURLRequest(URL: url)
         urlRequest.HTTPMethod = "POST"
         
         // Create PhotoPackage object
-        let photographer: Photographer = Photographer(name: "Magdalene", contact: "018-98765432", yearOfExperience: 2)
-        let package: PhotoPackage = PhotoPackage(name: "Holiday", price: 130.00, photographer: photographer, photoServiceType: PhotoServiceType.Candid)
+//        let photographer: Photographer = Photographer(name: "Magdalene", contact: "018-98765432", yearOfExperience: 2)
+//        let package: PhotoPackage = PhotoPackage(name: "Holiday", price: 130.00, photographer: photographer, photoServiceType: PhotoServiceType.Candid)
         // Change it as a JSONObject
         let jsonDictionary: [String : AnyObject] = [
-            "name" : package.name,
-            "price" : package.price
+            "name" : photoPackage.name,
+            "price" : photoPackage.price
         ]
         
         let jsonData: NSData = try! NSJSONSerialization.dataWithJSONObject(jsonDictionary, options: NSJSONWritingOptions(rawValue: 0))

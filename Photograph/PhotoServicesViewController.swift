@@ -94,8 +94,10 @@ extension PhotoServicesViewController: AddPackageDelegate {
         self.packagesAvailable.append(didAddPark)
         self.dismissViewControllerAnimated(true, completion: nil)
         self.photoServicesUITableView.reloadData()
-        
-        PhotoPackageLoader.sharedLoader.creatingPackageOnServer { (success, error) in
+
+        // Save to server
+        PhotoPackageLoader.sharedLoader.creatingPackageOnServer(didAddPark) { (success, error) in
+            // Thing to do when response comes back
             print(success)
         }
     }
