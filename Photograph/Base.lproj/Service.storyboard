@@ -161,7 +161,7 @@
             </objects>
             <point key="canvasLocation" x="334" y="2556"/>
         </scene>
-        <!--Photo Package Details View Controller-->
+        <!--Item-->
         <scene sceneID="1Li-dy-1Ja">
             <objects>
                 <viewController storyboardIdentifier="PhotoPackageDetailsViewController" id="2Pt-oq-yTf" customClass="PhotoPackageDetailsViewController" customModule="Photograph" customModuleProvider="target" sceneMemberID="viewController">
@@ -179,34 +179,24 @@
                                     <navigationItem title="Photo Package" id="d7w-7O-KhS"/>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YqG-ED-klw">
-                                <rect key="frame" x="279" y="126" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEv-Tg-iSA">
-                                <rect key="frame" x="20" y="279" width="48" height="30"/>
-                                <state key="normal" title="Cancel"/>
-                                <connections>
-                                    <action selector="cancel:" destination="2Pt-oq-yTf" eventType="touchUpInside" id="2Yu-DJ-MGe"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="holiday-water" translatesAutoresizingMaskIntoConstraints="NO" id="Ypo-iv-D6b">
-                                <rect key="frame" x="20" y="88" width="240" height="128"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Holiday at the Beach" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTz-tJ-GhT">
-                                <rect key="frame" x="279" y="88" width="158" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Holiday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTz-tJ-GhT">
+                                <rect key="frame" x="31" y="97" width="554" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="XTz-tJ-GhT" secondAttribute="trailing" constant="20" id="C8s-cf-ueW"/>
+                            <constraint firstItem="XTz-tJ-GhT" firstAttribute="top" secondItem="ENk-yx-vwZ" secondAttribute="bottom" constant="33" id="Mc4-a6-N1s"/>
+                            <constraint firstItem="XTz-tJ-GhT" firstAttribute="leading" secondItem="JXf-lb-b81" secondAttribute="leadingMargin" constant="20" id="yAa-cy-QGl"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="gT9-7f-mqn"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="cancel" destination="xEv-Tg-iSA" id="imA-Ht-k8W"/>
-                        <outlet property="packageDetailsView" destination="Ypo-iv-D6b" id="EmT-u7-TiH"/>
+                        <outlet property="nameLabel" destination="XTz-tJ-GhT" id="Su9-Si-Wj4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p0d-nj-WzC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -215,7 +205,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="holiday-water" width="659" height="515"/>
         <image name="service-icon" width="30" height="30"/>
     </resources>
 </document>

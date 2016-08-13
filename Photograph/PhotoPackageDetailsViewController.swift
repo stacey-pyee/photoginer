@@ -12,11 +12,13 @@ import UIKit
 class PhotoPackageDetailsViewController: UIViewController {
     var photoPackage: PhotoPackage!
     
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var packageDetailsView: UIImageView!
-    @IBOutlet weak var cancel: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.nameLabel.text = photoPackage.name
     }
     
     override func didReceiveMemoryWarning() {
